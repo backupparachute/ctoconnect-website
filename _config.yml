@@ -1,0 +1,66 @@
+title: CTO Connect
+description: Your On-Call Fractional CTO - Get Unstuck. Stay on Track. CTO Expertise, On-Demand.
+url: "https://ctoconnect.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Social media
+social:
+  name: CTO Connect
+  links:
+    - https://github.com/yourusername
+    - https://linkedin.com/in/yourusername
+    - https://twitter.com/yourusername
+
+# Author information
+author:
+  name: Kyle Miller
+  email: kyle@ctoconnect.io
+  bio: "Fractional CTO with over 25 years of experience delivering software for Fortune 500s, hedge funds, government agencies, and fast moving startups."
+  location: "United States"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/yourusername"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/yourusername"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/yourusername"
