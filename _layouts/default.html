@@ -18,7 +18,7 @@
         :root {
             --primary-color: #7A588D;
             --primary-highlight: #8C6DA0;
-            --primary-shade: #553A68;
+            --primary-dark: #553A68;
             --secondary-color: #1E867A;
             --secondary-highlight: #62ABA2;
             --notification-color: #D83554;
@@ -38,7 +38,7 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-shade) 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
             color: white;
             padding: 100px 0;
         }
@@ -64,8 +64,8 @@
         }
         
         .btn-primary:hover {
-            background-color: var(--primary-shade);
-            border-color: var(--primary-shade);
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
         }
         
         .section-padding {
@@ -73,7 +73,7 @@
         }
         
         .text-gradient {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-shade));
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -136,30 +136,30 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);">
         <div class="container">
             <a class="navbar-brand" href="{{ site.baseurl }}/">
-                <img src="{{ site.baseurl }}/assets/images/logo.png" alt="CTO Connect Logo">
+                <img src="{{ site.baseurl }}/assets/images/logo-light.png" alt="CTO Connect Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: white;">
+                <span class="navbar-toggler-icon" style="background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\");"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/about.html">About</a>
+                        <a class="nav-link text-white" href="/about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link text-white" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                        <a class="nav-link text-white" href="#how-it-works">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Pricing</a>
+                        <a class="nav-link text-white" href="#pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link text-white" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
