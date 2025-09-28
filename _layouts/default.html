@@ -16,14 +16,13 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #2c5aa0;
-            --primary-dark: #1e3f6b;
-            --primary-light: #4a7bc8;
-            --secondary-color: #6c757d;
-            --success-color: #198754;
-            --info-color: #0dcaf0;
-            --warning-color: #ffc107;
-            --danger-color: #dc3545;
+            --primary-color: #7A588D;
+            --primary-highlight: #8C6DA0;
+            --primary-shade: #553A68;
+            --secondary-color: #1E867A;
+            --secondary-highlight: #62ABA2;
+            --notification-color: #D83554;
+            --background-grey: #F2F2F2;
             --light-color: #f8f9fa;
             --dark-color: #212529;
         }
@@ -39,7 +38,7 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-shade) 100%);
             color: white;
             padding: 100px 0;
         }
@@ -55,15 +54,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        .pricing-card {
-            border: 2px solid var(--primary-color);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-        
-        .pricing-card:hover {
-            transform: scale(1.02);
-        }
         
         .btn-primary {
             background-color: var(--primary-color);
@@ -74,8 +64,8 @@
         }
         
         .btn-primary:hover {
-            background-color: var(--primary-dark);
-            border-color: var(--primary-dark);
+            background-color: var(--primary-shade);
+            border-color: var(--primary-shade);
         }
         
         .section-padding {
@@ -83,10 +73,58 @@
         }
         
         .text-gradient {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-shade));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+        
+        .bg-light {
+            background-color: var(--background-grey) !important;
+        }
+        
+        .btn-warning {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-warning:hover {
+            background-color: var(--secondary-highlight);
+            border-color: var(--secondary-highlight);
+            color: white;
+        }
+        
+        .text-warning {
+            color: var(--secondary-color) !important;
+        }
+        
+        .alert-notification {
+            background-color: var(--notification-color);
+            color: white;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .text-primary {
+            color: var(--primary-color) !important;
+        }
+        
+        .border-primary {
+            border-color: var(--primary-color) !important;
+        }
+        
+        .pricing-card {
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.02);
+            border-color: var(--primary-highlight);
         }
     </style>
     
@@ -101,7 +139,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ site.baseurl }}/">
-                <img src="{{ site.baseurl }}/assets/images/cto-dots-logo.png" alt="CTO Connect Logo">
+                <img src="{{ site.baseurl }}/assets/images/logo.png" alt="CTO Connect Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -138,7 +176,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <img src="{{ site.baseurl }}/assets/images/cto-dots-logo.png" alt="CTO Connect Logo" height="40" class="mb-3">
+                    <img src="{{ site.baseurl }}/assets/images/logo.png" alt="CTO Connect Logo" height="40" class="mb-3">
                     <p class="text-muted">Your On-Call Fractional CTO. Get Unstuck. Stay on Track.</p>
                 </div>
                 <div class="col-lg-4 mb-4">
