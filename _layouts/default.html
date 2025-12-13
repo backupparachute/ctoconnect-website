@@ -11,159 +11,63 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #7A588D;
-            --primary-highlight: #8C6DA0;
-            --primary-dark: #553A68;
-            --secondary-color: #1E867A;
-            --secondary-highlight: #62ABA2;
-            --notification-color: #D83554;
-            --background-grey: #F2F2F2;
-            --light-color: #f8f9fa;
-            --dark-color: #212529;
+            --purple: #6b21a8;
+            --teal: #14b8a6;
         }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            font-size: 1.125rem;
+            line-height: 1.7;
         }
-        
-        .navbar-brand img {
-            height: 40px;
-            width: auto;
+
+        .handwritten {
+            font-family: 'Caveat', cursive;
+            font-weight: 700;
         }
-        
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 100px 0;
+
+        .text-purple {
+            color: var(--purple);
         }
-        
-        .bg-primary-gradient {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
+
+        .text-teal {
+            color: var(--teal);
         }
-        
-        .feature-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            border-radius: 15px;
+
+        .bg-purple {
+            background-color: var(--purple);
         }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+        .bg-teal {
+            background-color: var(--teal);
         }
-        
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            border-radius: 25px;
-            padding: 12px 30px;
-            font-weight: 600;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-            border-color: var(--primary-dark);
-        }
-        
-        .section-padding {
-            padding: 80px 0;
-        }
-        
-        .text-gradient {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .bg-light {
-            background-color: var(--background-grey) !important;
-        }
-        
-        .btn-warning {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
+
+        .btn-purple {
+            background-color: var(--purple);
+            border-color: var(--purple);
             color: white;
         }
-        
-        .btn-warning:hover {
-            background-color: var(--secondary-highlight);
-            border-color: var(--secondary-highlight);
+
+        .btn-purple:hover {
+            background-color: #7c3aed;
+            border-color: #7c3aed;
             color: white;
         }
-        
-        .text-warning {
-            color: var(--secondary-color) !important;
-        }
-        
-        .alert-notification {
-            background-color: var(--notification-color);
+
+        .btn-teal {
+            background-color: var(--teal);
+            border-color: var(--teal);
             color: white;
         }
-        
-        .bg-primary {
-            background-color: var(--primary-color) !important;
-        }
-        
-        .text-primary {
-            color: var(--primary-color) !important;
-        }
-        
-        .border-primary {
-            border-color: var(--primary-color) !important;
-        }
-        
-        .pricing-card {
-            border: 2px solid var(--primary-color);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-        
-        .pricing-card:hover {
-            transform: scale(1.02);
-            border-color: var(--primary-highlight);
-        }
-        
-        /* Form Styling */
-        .form-control, .form-select {
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            padding: 12px 16px;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .form-control:focus, .form-select:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.2rem rgba(122, 88, 141, 0.15);
-        }
-        
-        .form-control-lg, .form-select-lg {
-            padding: 14px 18px;
-            font-size: 1rem;
-        }
-        
-        .form-label {
-            color: var(--dark-color);
-            margin-bottom: 8px;
-        }
-        
-        /* Badge styling */
-        .badge.bg-warning {
-            background-color: var(--secondary-color) !important;
-            color: white !important;
-        }
-        
-        .badge.bg-warning.text-dark {
-            background-color: #ffc107 !important;
-            color: #212529 !important;
+
+        .btn-teal:hover {
+            background-color: #0d9488;
+            border-color: #0d9488;
+            color: white;
         }
     </style>
     
@@ -175,33 +79,44 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top bg-primary-gradient">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ site.baseurl }}/">
-                <img src="{{ site.baseurl }}/assets/images/logo-light.png" alt="CTO Connect Logo">
+                <svg width="200" height="50" viewBox="0 0 200 50">
+                    <text x="5" y="35"
+                          font-family="'Caveat', cursive"
+                          font-size="32"
+                          font-weight="700"
+                          fill="#000000">CTOConnect</text>
+
+                    <defs>
+                        <linearGradient id="nav-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#6b21a8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M5,42 L175,40"
+                          stroke="url(#nav-gradient)"
+                          stroke-width="2.5"
+                          stroke-linecap="round"/>
+                </svg>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: white;">
-                <span class="navbar-toggler-icon" style="background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\");"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/about.html">About</a>
+                        <a class="nav-link" href="#why">Why This Exists</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/#services">Services</a>
+                        <a class="nav-link" href="#who">Who This Is For</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/#how-it-works">How It Works</a>
+                        <a class="nav-link" href="#how">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/#pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="/#contact">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-warning px-4" href="/register.html">Register</a>
+                        <a class="nav-link" href="#pricing">Pricing</a>
                     </li>
                 </ul>
             </div>
@@ -214,44 +129,44 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-5" style="background-color: var(--secondary-highlight); color: white;">
+    <footer class="bg-light py-5 border-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <img src="{{ site.baseurl }}/assets/images/logo.png" alt="CTO Connect Logo" height="40" class="mb-3">
-                    <p style="color: rgba(255, 255, 255, 0.8);">Your On-Call Fractional CTO. Get Unstuck. Stay on Track.</p>
+                <div class="col-lg-6 mb-4">
+                    <svg width="240" height="70" viewBox="0 0 240 70" class="mb-3">
+                        <text x="5" y="45"
+                              font-family="'Caveat', cursive"
+                              font-size="48"
+                              font-weight="700"
+                              fill="#000000">CTOConnect</text>
+
+                        <defs>
+                            <linearGradient id="footer-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#6b21a8;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M5,55 L210,52"
+                              stroke="url(#footer-gradient)"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+                    </svg>
+                    <p class="text-muted">CTO-level guidance without the full-time commitment.</p>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#about" class="text-decoration-none" style="color: rgba(255, 255, 255, 0.8);">About</a></li>
-                        <li><a href="#services" class="text-decoration-none" style="color: rgba(255, 255, 255, 0.8);">Services</a></li>
-                        <li><a href="#how-it-works" class="text-decoration-none" style="color: rgba(255, 255, 255, 0.8);">How It Works</a></li>
-                        <li><a href="#pricing" class="text-decoration-none" style="color: rgba(255, 255, 255, 0.8);">Pricing</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5>Contact</h5>
-                    <p style="color: rgba(255, 255, 255, 0.8);" class="mb-2">
+                <div class="col-lg-6 mb-4 text-lg-end">
+                    <p class="mb-2">
                         <i class="fas fa-envelope me-2"></i>
-                        <a href="mailto:{{ site.author.email }}" class="text-decoration-none" style="color: rgba(255, 255, 255, 0.8);">{{ site.author.email }}</a>
+                        <a href="mailto:{{ site.author.email }}" class="text-decoration-none text-dark">{{ site.author.email }}</a>
                     </p>
-                    <div class="mt-3">
-                        {% for link in site.author.links %}
-                        <a href="{{ link.url }}" class="me-3" target="_blank" rel="noopener" style="color: rgba(255, 255, 255, 0.8);">
-                            <i class="{{ link.icon }} fa-lg"></i>
-                        </a>
-                        {% endfor %}
-                    </div>
                 </div>
             </div>
             <hr class="my-4">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p style="color: rgba(255, 255, 255, 0.8);" class="mb-0">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+                    <p class="text-muted mb-0">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p style="color: rgba(255, 255, 255, 0.8);" class="mb-0">Made with ❤️ by <a href="https://backupparachute.com" class="text-decoration-none" style="color: rgba(255, 255, 255, 0.8);">Backup Parachute Software</a></p>
+                    <p class="text-muted mb-0">Made by <a href="https://backupparachute.com" class="text-decoration-none text-dark">Backup Parachute Software</a></p>
                 </div>
             </div>
         </div>

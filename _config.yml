@@ -1,5 +1,5 @@
-title: CTO Connect
-description: Your On-Call Fractional CTO - Get Unstuck. Stay on Track. CTO Expertise, On-Demand.
+title: CTOConnect
+description: CTO-Level Guidance Without the Full-Time Commitment. Real problems. Real answers. No bullshit.
 url: "https://ctoconnect.io"
 baseurl: ""
 
@@ -52,7 +52,7 @@ social:
 author:
   name: Kyle Miller
   email: kyle@ctoconnect.io
-  bio: "Fractional CTO with over 25 years of experience delivering software for Fortune 500s, hedge funds, government agencies, and fast moving startups."
+  bio: "24 years building production systems. Built and sold a SaaS. Teaching sustainable development practices to technical founders."
   location: "United States"
   links:
     - label: "GitHub"
