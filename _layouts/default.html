@@ -131,6 +131,40 @@
             transform: scale(1.02);
             border-color: var(--primary-highlight);
         }
+        
+        /* Form Styling */
+        .form-control, .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 12px 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(122, 88, 141, 0.15);
+        }
+        
+        .form-control-lg, .form-select-lg {
+            padding: 14px 18px;
+            font-size: 1rem;
+        }
+        
+        .form-label {
+            color: var(--dark-color);
+            margin-bottom: 8px;
+        }
+        
+        /* Badge styling */
+        .badge.bg-warning {
+            background-color: var(--secondary-color) !important;
+            color: white !important;
+        }
+        
+        .badge.bg-warning.text-dark {
+            background-color: #ffc107 !important;
+            color: #212529 !important;
+        }
     </style>
     
     {% seo %}
@@ -155,16 +189,19 @@
                         <a class="nav-link text-white" href="/about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#services">Services</a>
+                        <a class="nav-link text-white" href="/#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#how-it-works">How It Works</a>
+                        <a class="nav-link text-white" href="/#how-it-works">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#pricing">Pricing</a>
+                        <a class="nav-link text-white" href="/#pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#contact">Contact</a>
+                        <a class="nav-link text-white" href="/#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-warning px-4" href="/register.html">Register</a>
                     </li>
                 </ul>
             </div>

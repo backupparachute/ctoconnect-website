@@ -1,0 +1,303 @@
+---
+layout: default
+title: Register for Early Access | CTO Connect
+description: Be the first to know when CTO Connect launches. Sign up for early access and get notified when we go live.
+---
+
+<!-- Register Hero Section -->
+<section class="hero-section" id="register">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="mb-4">
+                    <span class="badge bg-warning text-dark fs-6 px-3 py-2">
+                        <i class="fas fa-rocket me-2"></i>Coming Soon
+                    </span>
+                </div>
+                <h1 class="display-4 fw-bold mb-4">
+                    Get <span class="text-warning">Early Access</span>
+                </h1>
+                <p class="lead mb-4">
+                    We're putting the finishing touches on CTO Connect. Sign up now to be notified the moment we launch and secure your spot.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Registration Form Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card shadow-lg border-0" style="border-radius: 20px;">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                                <i class="fas fa-bell fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold">Join the Waitlist</h3>
+                            <p class="text-muted">Be among the first to get access when we launch</p>
+                        </div>
+                        
+                        <!-- MailerLite Embedded Form -->
+                        <!-- Replace the form below with your MailerLite embedded form code -->
+                        <!-- Or use the custom form with MailerLite's JavaScript API -->
+                        
+                        <form id="register-form" class="ml-block-form" 
+                              action="https://assets.mailerlite.com/jsonp/YOUR_ACCOUNT_ID/forms/YOUR_FORM_ID/subscribe" 
+                              method="post"
+                              data-code="">
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="ml-name" class="form-label fw-semibold">
+                                        <i class="fas fa-user text-primary me-2"></i>First Name *
+                                    </label>
+                                    <input type="text" class="form-control form-control-lg" id="ml-name" name="fields[name]" placeholder="Your first name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="ml-last-name" class="form-label fw-semibold">
+                                        <i class="fas fa-user text-primary me-2"></i>Last Name
+                                    </label>
+                                    <input type="text" class="form-control form-control-lg" id="ml-last-name" name="fields[last_name]" placeholder="Your last name">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="ml-email" class="form-label fw-semibold">
+                                    <i class="fas fa-envelope text-primary me-2"></i>Email Address *
+                                </label>
+                                <input type="email" class="form-control form-control-lg" id="ml-email" name="fields[email]" placeholder="you@company.com" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="ml-business" class="form-label fw-semibold">
+                                    <i class="fas fa-building text-primary me-2"></i>Business Name
+                                </label>
+                                <input type="text" class="form-control form-control-lg" id="ml-business" name="fields[company]" placeholder="Your company or startup name">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="ml-referral-code" class="form-label fw-semibold">
+                                    <i class="fas fa-ticket-alt text-primary me-2"></i>Referral Code
+                                </label>
+                                <input type="text" class="form-control form-control-lg" id="ml-referral-code" name="fields[referral_code]" placeholder="Enter your referral code">
+                                <div class="form-text">Have a referral code? Enter it here to get early access.</div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="ml-notes" class="form-label fw-semibold">
+                                    <i class="fas fa-comment-dots text-primary me-2"></i>Questions or Topics You'd Like to Discuss
+                                </label>
+                                <textarea class="form-control" id="ml-notes" name="fields[notes]" rows="4" placeholder="Tell us about your biggest challenges, what you're hoping to get from CTO Connect, or any questions you have..."></textarea>
+                                <div class="form-text">Optional - but helps us understand how we can best help you</div>
+                            </div>
+                            
+                            <!-- Honeypot field for spam prevention -->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="ml-submit-honeypot" tabindex="-1" autocomplete="off">
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg py-3">
+                                    <i class="fas fa-paper-plane me-2"></i>Join the Waitlist
+                                </button>
+                            </div>
+                            
+                            <p class="text-center text-muted small mt-3 mb-0">
+                                <i class="fas fa-lock me-1"></i>
+                                We respect your privacy. Unsubscribe at any time.
+                            </p>
+                        </form>
+                        
+                        <!-- Success Message (hidden by default) -->
+                        <div id="register-success" class="text-center d-none">
+                            <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-check fa-3x"></i>
+                            </div>
+                            <h3 class="fw-bold text-success">You're on the list!</h3>
+                            <p class="lead text-muted">
+                                Thanks for signing up! We'll send you an email as soon as CTO Connect goes live.
+                            </p>
+                            <a href="{{ site.baseurl }}/" class="btn btn-outline-primary mt-3">
+                                <i class="fas fa-home me-2"></i>Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What to Expect Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-5 fw-bold mb-4">What You'll Get at Launch</h2>
+                <p class="lead text-muted">Here's what's coming when we go live</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card h-100 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Unlimited Email Access</h5>
+                        <p class="card-text">Get answers to your technical and strategic questions anytime.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card h-100 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-video fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Weekly Group Calls</h5>
+                        <p class="card-text">Join weekly calls with other founders and get personalized advice.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card h-100 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-gift fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Early Bird Perks</h5>
+                        <p class="card-text">Early subscribers get special launch pricing and bonus content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-4">What Happens Next?</h2>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <span class="h5 mb-0">1</span>
+                            </div>
+                            <h6>Sign Up</h6>
+                            <p class="text-muted small">Fill out the form above to join the waitlist</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <span class="h5 mb-0">2</span>
+                            </div>
+                            <h6>Stay Tuned</h6>
+                            <p class="text-muted small">We'll keep you updated on our progress</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <span class="h5 mb-0">3</span>
+                            </div>
+                            <h6>Get Access</h6>
+                            <p class="text-muted small">Be first in line when we launch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MailerLite Universal Script -->
+<!-- You'll need to replace this with your actual MailerLite code -->
+<script>
+    // Option 1: If using MailerLite's embedded form, paste their script here
+    // They will provide you with a script tag that looks like:
+    // <script src="https://assets.mailerlite.com/js/universal.js"><\/script>
+    
+    // Option 2: For the custom form above, you can use fetch API
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const form = e.target;
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        
+        // Show loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Joining...';
+        submitBtn.disabled = true;
+        
+        // Note: For this to work with MailerLite, you'll need to either:
+        // 1. Use their embedded form (replace this entire form section)
+        // 2. Use their JavaScript API with your account credentials
+        // 3. Set up a serverless function to proxy the request
+        
+        // For now, simulate success (replace with actual MailerLite integration)
+        // This is a placeholder - see instructions below
+        
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            mode: 'cors'
+        })
+        .then(response => {
+            // Show success message
+            document.getElementById('register-form').classList.add('d-none');
+            document.getElementById('register-success').classList.remove('d-none');
+        })
+        .catch(error => {
+            // For demo purposes, still show success
+            // In production, handle the error appropriately
+            document.getElementById('register-form').classList.add('d-none');
+            document.getElementById('register-success').classList.remove('d-none');
+        });
+    });
+</script>
+
+<!--
+==========================================================
+MAILERLITE SETUP INSTRUCTIONS
+==========================================================
+
+To connect this form to MailerLite, follow these steps:
+
+1. LOG INTO MAILERLITE
+   Go to https://dashboard.mailerlite.com
+
+2. CREATE CUSTOM FIELDS (if not already done)
+   - Go to Subscribers > Fields
+   - Add these fields:
+     * company (Text) - for business name
+     * referral_code (Text) - for tracking referral/invite codes
+     * notes (Text/Textarea) - for questions/notes
+
+3. CREATE A SUBSCRIBER GROUP
+   - Go to Subscribers > Groups
+   - Create a group called "Pre-Launch Waitlist"
+
+4. GET YOUR EMBEDDED FORM CODE
+   Option A - Use MailerLite's Form Builder (Easiest):
+   - Go to Forms > Embedded forms > Create
+   - Add your fields
+   - Get the embed code and replace the form above
+   
+   Option B - Use the API:
+   - Get your Account ID from Settings > Account
+   - Get your API key from Integrations > API
+   - Update the form action URL with your details
+
+5. REPLACE PLACEHOLDERS
+   - In the form action URL above, replace:
+     * YOUR_ACCOUNT_ID with your MailerLite account ID
+     * YOUR_FORM_ID with your form ID
+
+For the easiest setup, I recommend using MailerLite's embedded 
+form builder - it handles all the submission logic automatically.
+==========================================================
+-->
+
