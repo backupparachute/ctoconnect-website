@@ -9,40 +9,15 @@ description: I spent 20 years rescuing teams from architectural disasters. Now I
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-3 fw-bold mb-4">You're stuck.</h1>
+                <h1 class="display-3 fw-bold mb-4">CTO-Level Guidance Without the Full-Time Commitment</h1>
 
-                <p class="lead mb-3">Your devs keep missing deadlines and you can't tell if it's them or your process.</p>
+                <p class="lead mb-3">20 years rescuing teams from architectural disasters.</p>
+                <p class="lead mb-5">Now I teach you how to avoid them in the first place.</p>
 
-                <p class="lead mb-3">You're thinking about a rewrite. It'll take 6 months. (It'll take 18.)</p>
-
-                <p class="lead mb-3">Your features are too big to estimate. You gloss over details. Then you're surprised when it takes 3x longer.</p>
-
-                <p class="lead mb-3">You hired a senior dev who said they knew what they were doing. They don't.</p>
-
-                <p class="lead mb-3">Someone on Reddit said "just use microservices." Should you? You have no idea.</p>
-
-                <p class="lead mb-3">Your tech stack is held together with duct tape. But a rewrite would kill your momentum.</p>
-
-                <p class="lead mb-4">You need someone to talk to. Someone who's been there. Someone who won't bullshit you.</p>
-
-                <hr class="my-5 mx-auto" style="width: 60%; opacity: 0.2;">
-
-                <p class="fs-4 fw-bold mb-3">That's what CTOConnect is.</p>
-
-                <p class="lead mb-3">Bi-weekly office hours from someone who's been lucky to work across the full spectrum over 27 years.</p>
-
-                <p class="lead mb-4">Fortune 500 companies. Startups. Military. Hedge funds. Small Business. Government agencies. SaaS. You name it.</p>
-                
-                <p class="lead mb-3">Built and sold a company. Still run production systems.</p>
-
-                <p class="lead mb-3">Still consult. Still code. Still ship.</p>
-
-                <p class="lead mb-4">Bring your real problems. Get real answers.</p>
-
-                <p class="fs-3 fw-bold mb-5">$99/month.</p>
+                <p class="fs-4 mb-5"><strong>Real problems. Real answers. No bullshit.</strong><br>$99/month.</p>
 
                 <div class="d-flex gap-3 justify-content-center flex-wrap mb-5">
-                    <a href="#pricing" class="btn btn-purple btn-lg rounded-pill px-4">Join Waitlist</a>
+                    <a href="#pricing" class="btn btn-purple btn-lg rounded-pill px-4">Join Office Hours</a>
                     <a href="#how" class="btn btn-outline-dark btn-lg rounded-pill px-4">See How It Works</a>
                 </div>
             </div>
@@ -57,58 +32,38 @@ description: I spent 20 years rescuing teams from architectural disasters. Now I
             <div class="col-lg-8 mx-auto">
                 <h2 class="display-4 fw-bold mb-5 handwritten text-teal text-center">Sound Familiar?</h2>
 
-                <div class="card shadow-sm rounded-3 mb-4 border-0">
+                <div class="card shadow-sm rounded-3 mb-3 border-0">
                     <div class="card-body p-4">
-                        <h5 class="fw-bold mb-3">"My devs aren't fast enough."</h5>
-                        <p class="mb-2">You've been waiting 2 months for a feature that should take 2 weeks.</p>
-                        <p class="mb-2">Your competitors are shipping faster.</p>
-                        <p class="mb-4">You're losing momentum.</p>
-                        <hr class="my-3" style="opacity: 0.1;">
-                        <p class="text-muted mb-0 fw-bold">→ Could be the devs. Could be the process. Usually it's both. Let's diagnose it.</p>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-3 mb-4 border-0">
-                    <div class="card-body p-4">
-                        <h5 class="fw-bold mb-3">"Should we rewrite this app?"</h5>
-                        <p class="mb-2">You're embarrassed to show the codebase to new hires.</p>
-                        <p class="mb-2">Every feature takes longer than the last one.</p>
-                        <p class="mb-4">You're afraid to touch anything without breaking something else.</p>
-                        <hr class="my-3" style="opacity: 0.1;">
-                        <p class="text-muted mb-0 fw-bold">→ Probably not. Rewrites take 3x longer than you think and kill momentum. Let's figure out what's actually broken first.</p>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-3 mb-4 border-0">
-                    <div class="card-body p-4">
-                        <h5 class="fw-bold mb-3">"I need to present architecture to a client on Friday."</h5>
-                        <p class="mb-2">You're not 100% sure your proposed solution will actually work at scale.</p>
-                        <p class="mb-2">You're worried you're overpromising.</p>
-                        <p class="mb-4">One wrong decision costs you months of rework.</p>
-                        <hr class="my-3" style="opacity: 0.1;">
-                        <p class="text-muted mb-0 fw-bold">→ Let's make sure you're not promising something you can't deliver.</p>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-3 mb-4 border-0">
-                    <div class="card-body p-4">
-                        <h5 class="fw-bold mb-3">"Our system is a mess and I don't know where to start."</h5>
-                        <p class="mb-2">Technical debt is compounding faster than you can ship features.</p>
-                        <p class="mb-2">Every "quick fix" makes things worse.</p>
-                        <p class="mb-4">You're paralyzed by the complexity.</p>
-                        <hr class="my-3" style="opacity: 0.1;">
-                        <p class="text-muted mb-0 fw-bold">→ Most messes grow from 2-3 early decisions. Let's find them and fix the root cause.</p>
+                        <h5 class="fw-bold mb-2">"We're about to rewrite everything. Is that insane?"</h5>
+                        <p class="text-muted mb-0">→ Probably. Let's talk before you burn 6 months.</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm rounded-3 mb-3 border-0">
                     <div class="card-body p-4">
-                        <h5 class="fw-bold mb-3">"AI is making us ship faster but everything feels fragile."</h5>
-                        <p class="mb-2">You're generating code 10x faster.</p>
-                        <p class="mb-2">But you're also creating technical debt 10x faster.</p>
-                        <p class="mb-4">You have a sinking feeling this will bite you in 6 months.</p>
-                        <hr class="my-3" style="opacity: 0.1;">
-                        <p class="text-muted mb-0 fw-bold">→ Speed without judgment creates bigger messes, faster. Let's add the judgment.</p>
+                        <h5 class="fw-bold mb-2">"I need to present architecture to a client on Friday."</h5>
+                        <p class="text-muted mb-0">→ Cool. Let's make sure you're not promising something you can't deliver.</p>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm rounded-3 mb-3 border-0">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2">"Our system is a mess and I don't know where to start."</h5>
+                        <p class="text-muted mb-0">→ Most messes grow from 2-3 early decisions. Let's find them.</p>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm rounded-3 mb-3 border-0">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2">"My devs aren't fast enough."</h5>
+                        <p class="text-muted mb-0">→ Could be the devs. Could be the process. Usually it's a mix. Let's diagnose it.</p>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm rounded-3 mb-3 border-0">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2">"AI is making us ship faster but everything feels fragile."</h5>
+                        <p class="text-muted mb-0">→ Yeah. Speed without judgment creates bigger messes, faster.</p>
                     </div>
                 </div>
             </div>
@@ -165,57 +120,39 @@ description: I spent 20 years rescuing teams from architectural disasters. Now I
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2 class="display-4 fw-bold mb-5 handwritten text-teal text-center">This Is For You If:</h2>
+                <h2 class="display-4 fw-bold mb-5 handwritten text-teal">This Is For You If:</h2>
 
                 <div class="card shadow-sm rounded-3 mb-3 border-0">
                     <div class="card-body p-4">
-                        <p class="mb-0">You wake up at 3 AM wondering if you're making the right technical decisions.</p>
+                        <p class="mb-0"><span class="text-success fs-4 me-2">✅</span> You're a <strong>solo founder or small team</strong> (2-5 devs) with no CTO making architectural decisions you can't undo</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm rounded-3 mb-3 border-0">
                     <div class="card-body p-4">
-                        <p class="mb-0">You're embarrassed when investors ask about your tech stack and you have to explain the duct tape.</p>
+                        <p class="mb-0"><span class="text-success fs-4 me-2">✅</span> You <strong>ship features</strong> but don't know what you don't know, and you're about to launch something real</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm rounded-3 mb-3 border-0">
                     <div class="card-body p-4">
-                        <p class="mb-0">You've been waiting 3 months for a feature that should take 3 weeks and nobody can tell you why.</p>
+                        <p class="mb-0"><span class="text-success fs-4 me-2">✅</span> Your team is <strong>stuck</strong> or <strong>missing deadlines</strong> and you can't tell if you need a rewrite, a refactor, better devs, or better process</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm rounded-3 mb-3 border-0">
                     <div class="card-body p-4">
-                        <p class="mb-0">You hired a "senior" dev who turned out to be a mid-level dev with confidence.</p>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-3 mb-3 border-0">
-                    <div class="card-body p-4">
-                        <p class="mb-0">You're about to commit to a 6-month rewrite and you have a sinking feeling it's the wrong move.</p>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-3 mb-3 border-0">
-                    <div class="card-body p-4">
-                        <p class="mb-0">You're a freelancer presenting architecture to a client and you're not 100% sure you know what you're doing.</p>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-3 mb-3 border-0">
-                    <div class="card-body p-4">
-                        <p class="mb-0">You keep missing deadlines and you can't figure out if it's the devs, the process, or you.</p>
+                        <p class="mb-0"><span class="text-success fs-4 me-2">✅</span> You're <strong>hiring or evaluating a CTO / Engineer</strong> and want a second set of eyes on candidates or major decisions</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm rounded-3 mb-5 border-0">
                     <div class="card-body p-4">
-                        <p class="mb-0">You're a solo founder or small team (2-5 devs) making architectural decisions with no one to ask.</p>
+                        <p class="mb-0"><span class="text-success fs-4 me-2">✅</span> You're a <strong>freelancer presenting architecture to clients</strong> or need to validate your process isn't broken</p>
                     </div>
                 </div>
 
-                <h3 class="display-6 fw-bold mb-4 handwritten text-dark text-center">This Is NOT For You If:</h3>
+                <h3 class="display-6 fw-bold mb-4 handwritten text-dark">This Is NOT For You If:</h3>
 
                 <div class="card shadow-sm rounded-3 mb-3 border-0 bg-white">
                     <div class="card-body p-4">
@@ -243,56 +180,29 @@ description: I spent 20 years rescuing teams from architectural disasters. Now I
 <section class="py-5 my-5" id="why">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="display-4 fw-bold mb-5 handwritten text-purple">Why This Exists</h2>
-                <p class="mb-4">I've been building software for 27 years.</p>
-                <p class="mb-4">I've been lucky to work across the full spectrum:</p>
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-4 fw-bold mb-5 handwritten text-purple">From Rescue Work to Prevention</h2>
 
-                <p class="mb-3">Big companies. Small companies. Everything in between.</p>
+                <p class="mb-4">For 20 years, I was the guy teams called when things went sideways.</p>
 
-                <p class="mb-3">Each taught me something different:</p>
+                <p class="mb-2">Missed deadlines. Failed rewrites. Architectural dead ends.</p>
+                <p class="mb-5">"How did we let it get this bad?" moments.</p>
 
-                <ul class="mb-5">
+                <p class="mb-5">I delivered more as a solo dev than their 4-6 person teams. I've done 100+ production deployments in a year while running support, design, and architecture.</p>
 
-                    <li>Fortune 500s: Process matters at scale</li>
+                <p class="fs-5 fw-bold mb-3">But here's what I learned:</p>
+                <p class="fs-4 fw-bold mb-5">Almost every disaster was preventable.</p>
 
-                    <li>Startups: Speed beats perfection</li>
+                <p class="mb-2">Bad architecture compounds.</p>
+                <p class="mb-2">Rushed rewrites create chaos.</p>
+                <p class="mb-5">Teams underestimate how long code actually lives.</p>
 
-                    <li>Military: Security isn't optional</li>
+                <p class="mb-5">You don't run a production system for 12 years by accident. You only destroy one by making short-sighted decisions.</p>
 
-                    <li>Hedge funds: Correctness under pressure</li>
+                <p class="fs-4 fw-bold mb-3">So I'm done being the firefighter.</p>
 
-                    <li>SaaS: Uptime is everything</li>
-
-                </ul>
-
-                <p class="mb-4">I spent years as the emergency backup parachute.</p>
-
-                <p class="mb-4">The guy you call when the rewrite failed.</p>
-
-                <p class="mb-5">The guy who tells you your $500K disaster was avoidable.</p>
-
-                <p class="fs-5 fw-bold mb-5">Let me help you to avoid needing a rescue in the first place.</p>
-
-                <hr class="my-5">
-
-                <h3 class="display-6 fw-bold mb-4 handwritten text-purple">What I've Learned</h3>
-
-                <p class="mb-4">There's no one "right way" to build software.</p>
-
-                <p class="mb-4">What works for a 2-person startup doesn't work for enterprise.</p>
-
-                <p class="mb-5">What works at Google doesn't work for bootstrapped SaaS.</p>
-
-                <p class="mb-5">Different scales need different answers.</p>
-
-                <p class="mb-4">I help you figure out what works for YOUR context.</p>
-
-                <p class="mb-4">Not one-size-fits-all advice.</p>
-
-                <p class="mb-5">Not dogma from someone who only knows startups. Or only knows enterprise.</p>
-
-                <p class="fs-5 fw-bold">Real guidance from someone who's done it at every level.</p>
+                <p class="mb-2">I'm not here to save the day.</p>
+                <p class="fs-5 fw-bold">I'm here to save you from needing one.</p>
             </div>
         </div>
     </div>
@@ -312,7 +222,7 @@ description: I spent 20 years rescuing teams from architectural disasters. Now I
                     <li>Understand long-term consequences</li>
                     <li>Model future growth</li>
                     <li>Prevent architectural collapse</li>
-                    <li>Design for year 5 or 10</li>
+                    <li>Design for year 12</li>
                     <li>Judge whether a rewrite is necessary</li>
                 </ul>
 
@@ -385,7 +295,7 @@ description: I spent 20 years rescuing teams from architectural disasters. Now I
                         <ul class="list-unstyled mb-4">
                             <li class="mb-2">Fractional CTO: $2K–$5K/month</li>
                             <li class="mb-2">One-time consulting: $600–$10K</li>
-                            <li class="mb-2">Winging it alone: Free (until it costs you $500K or more)</li>
+                            <li class="mb-2">Winging it alone: Free (until it costs you $500K)</li>
                         </ul>
                         <p class="fs-5 fw-bold text-center mb-0">This is CTO-level guidance for the price of a SaaS subscription.</p>
                     </div>
@@ -400,35 +310,24 @@ description: I spent 20 years rescuing teams from architectural disasters. Now I
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2 class="display-4 fw-bold mb-5 handwritten text-purple text-center">You're Making Decisions You Can't Undo</h2>
+                <h2 class="display-4 fw-bold mb-5 handwritten text-purple text-center">Who Am I?</h2>
 
-                <p class="lead mb-3">Monolith or microservices?</p>
-                <p class="lead mb-3">Rewrite or refactor?</p>
-                <p class="lead mb-5">Fire the dev or fix the process?</p>
+                <p class="lead text-center mb-5">I'm Kyle. 24 years building production systems. Built and sold a SaaS. Stayed on with equity.</p>
 
-                <p class="fs-4 fw-bold mb-3">One wrong choice costs you 6 months and $200K.</p>
-
-                <p class="lead mb-5">You need someone who's seed and fixed these mistakes so you don't have to.</p>
-
-                <hr class="my-5 mx-auto" style="width: 60%; opacity: 0.2;">
-
-                <p class="fs-4 fw-bold mb-4">I've been building software for 27 years.</p>
-
-                <p class="mb-2">Built and sold a SaaS.</p>
-                <p class="mb-2">Still run SaaS platforms in production.</p>
-                <p class="mb-5">Consulted on and off for 20+ years.</p>
-
-                <p class="lead mb-3">I've seen every way a technical decision can blow up.</p>
-
-                <p class="mb-2">I don't have all the answers, but I've probably seen your situation before.</p>
-                <p class="mb-5">Let me help you avoid the expensive mistakes I've seen.</p>
-
-                <h4 class="handwritten fs-3 text-teal mb-3">What I help with:</h4>
+                <h4 class="handwritten fs-3 text-teal mb-3">What I've done:</h4>
                 <ul class="mb-5">
-                    <li class="mb-2">Should you rewrite this? (Usually no)</li>
-                    <li class="mb-2">Are your devs the problem? (Usually not the only problem)</li>
-                    <li class="mb-2">How do you break down features that actually ship?</li>
-                    <li class="mb-2">What's the quickest fix vs the ideal solution vs the practical middle ground?</li>
+                    <li>Averaged 100+ production deploys per year, most solo, for years before and after AI</li>
+                    <li>Run a SaaS in production for last 12 years</li>
+                    <li>Built, ran, and successfully sold a SaaS, stayed on with equity and continue to build it</li>
+                    <li>Spent years as "rescue engineer", now shifting to prevention</li>
+                </ul>
+
+                <h4 class="handwritten fs-3 text-teal mb-3">What I can help you do:</h4>
+                <ul class="mb-5">
+                    <li>Break down features so they actually ship</li>
+                    <li>Make architectural decisions you won't regret</li>
+                    <li>Avoid rewrites that kill momentum</li>
+                    <li>Build systems that last years, not sprints</li>
                 </ul>
 
                 <p class="lead text-center fw-bold">I've learned what works. Let me help you skip the hard lessons.</p>
