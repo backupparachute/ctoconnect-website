@@ -14,7 +14,7 @@ layout: default
                     </ol>
                 </nav>
 
-                <h1 class="display-5 fw-bold mb-3">{{ page.title }}</h1>
+                <h1 class="display-5 fw-bold mb-3 handwritten text-purple">{{ page.title }}</h1>
                 <p class="text-muted mb-4">
                     <i class="fas fa-calendar me-2"></i>{{ page.date | date: "%B %-d, %Y" }}
                     {% if page.author %}
@@ -26,6 +26,14 @@ layout: default
                     <span class="badge bg-purple"><i class="fas fa-lock me-1"></i>Members Only</span>
                     {% endif %}
                 </p>
+
+                {% if page.tags.size > 0 %}
+                <div class="mb-4">
+                    {% for tag in page.tags %}
+                    <a href="{{ site.baseurl }}/articles/#{{ tag }}" class="badge bg-light text-dark text-decoration-none me-1">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
 
                 {% if page.members_only %}
                     <!-- Teaser visible to everyone -->
@@ -51,6 +59,15 @@ layout: default
                     <article class="article-content">
                         {{ content }}
                     </article>
+
+                    <!-- CTA for non-members on public articles -->
+                    <div data-o-anonymous>
+                        <div class="bg-light rounded-3 p-4 mt-5 text-center">
+                            <h3 class="handwritten text-purple mb-3">Want more like this?</h3>
+                            <p class="text-muted mb-3">Join CTOConnect for bi-weekly office hours, recorded sessions, and direct access to experienced technical leadership.</p>
+                            <a href="https://cto-connect.outseta.com/auth?widgetMode=register&planUid=nmDKPxWy#o-anonymous" class="btn btn-purple btn-lg rounded-pill px-4">Start Your 30-Day Free Trial</a>
+                        </div>
+                    </div>
                 {% endif %}
 
             </div>
