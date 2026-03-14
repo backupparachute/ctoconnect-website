@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+<section class="py-5" data-o-authenticated>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/dashboard/">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/episodes/">Episodes</a></li>
+                        <li class="breadcrumb-item active">Episode {{ page.episode_number }}</li>
+                    </ol>
+                </nav>
+
+                <h1 class="display-5 fw-bold mb-2">{{ page.title }}</h1>
+                <p class="text-muted mb-4">
+                    <i class="fas fa-calendar me-2"></i>{{ page.date | date: "%B %-d, %Y" }}
+                    <span class="mx-2">|</span>
+                    <i class="fas fa-clock me-2"></i>{{ page.duration }}
+                    <span class="mx-2">|</span>
+                    Episode {{ page.episode_number }}
+                </p>
+
+                <!-- Video Player -->
+                {% include bunny-player.html video_id=page.bunny_video_id %}
+
+                <!-- Description -->
+                <div class="my-4">
+                    <p class="lead">{{ page.description }}</p>
+                </div>
+
+                <!-- Resources -->
+                {% if page.resources %}
+                <div class="card shadow-sm rounded-3 border-0 mb-4">
+                    <div class="card-body p-4">
+                        <h3 class="handwritten fs-2 text-teal mb-3">Resources</h3>
+                        <ul class="list-unstyled mb-0">
+                            {% for resource in page.resources %}
+                            <li class="mb-2">
+                                <i class="fas fa-link me-2 text-teal"></i>
+                                <a href="{{ resource.url }}" class="text-decoration-none">{{ resource.title }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Transcript -->
+                {% if content != "" %}
+                <div class="mt-5">
+                    <h2 class="handwritten fs-1 text-purple mb-4">Transcript</h2>
+                    <div class="card shadow-sm rounded-3 border-0">
+                        <div class="card-body p-4">
+                            {{ content }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fallback for anonymous users -->
+<section class="py-5 my-5" data-o-anonymous>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                {% include signup-wall.html %}
+            </div>
+        </div>
+    </div>
+</section>

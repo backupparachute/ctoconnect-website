@@ -11,24 +11,37 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Bunny.net Stream (video hosting)
+bunny_library_id: "YOUR_LIBRARY_ID"
+
 # Collections
 collections:
+  episodes:
+    output: true
+    permalink: /episodes/:title/
   posts:
     output: true
-    permalink: /:collection/:title/
+    permalink: /articles/:title/
 
 # Defaults
 defaults:
   - scope:
       path: ""
+      type: "episodes"
+    values:
+      layout: "episode"
+      members_only: true
+  - scope:
+      path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "article"
+      members_only: false
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: "page"
+      layout: "default"
 
 # Exclude from processing
 exclude:

@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<section class="py-5" data-o-authenticated>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+
+                <h1 class="display-4 fw-bold mb-2 handwritten text-purple">Welcome Back</h1>
+                <p class="lead text-muted mb-5">Your CTOConnect member dashboard.</p>
+
+                <!-- Upcoming Session -->
+                <div class="card shadow-sm rounded-3 border-0 bg-purple text-white mb-5">
+                    <div class="card-body p-4">
+                        <h2 class="handwritten fs-2 mb-3">Next Office Hours</h2>
+                        <p class="fs-5 mb-1"><i class="fas fa-calendar me-2"></i>{{ page.next_session_date }}</p>
+                        <p class="fs-5 mb-0"><i class="fas fa-clock me-2"></i>{{ page.next_session_time }}</p>
+                        {% if page.next_session_topic %}
+                        <p class="mt-3 mb-0"><strong>Topic:</strong> {{ page.next_session_topic }}</p>
+                        {% endif %}
+                        {% if page.next_session_link %}
+                        <a href="{{ page.next_session_link }}" class="btn btn-teal btn-lg rounded-pill px-4 mt-3">Join Session</a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Recent Episodes -->
+                <h2 class="handwritten fs-1 text-teal mb-4">Recent Episodes</h2>
+                {% assign episode_count = site.episodes | size %}
+                {% if episode_count > 0 %}
+                <div class="row mb-3">
+                    {% for episode in site.episodes reversed limit:3 %}
+                        {% include episode-card.html episode=episode %}
+                    {% endfor %}
+                </div>
+                <div class="text-center mb-5">
+                    <a href="{{ site.baseurl }}/episodes/" class="btn btn-outline-dark rounded-pill px-4">View All Episodes</a>
+                </div>
+                {% else %}
+                <div class="card shadow-sm rounded-3 border-0 mb-5">
+                    <div class="card-body p-4 text-muted">
+                        No episodes yet. Check back after the first office hours session.
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Recent Articles -->
+                <h2 class="handwritten fs-1 text-purple mb-4">Recent Articles</h2>
+                {% assign post_count = site.posts | size %}
+                {% if post_count > 0 %}
+                <div class="row mb-3">
+                    {% for post in site.posts limit:3 %}
+                        {% include article-card.html article=post %}
+                    {% endfor %}
+                </div>
+                <div class="text-center">
+                    <a href="{{ site.baseurl }}/articles/" class="btn btn-outline-dark rounded-pill px-4">View All Articles</a>
+                </div>
+                {% else %}
+                <div class="card shadow-sm rounded-3 border-0">
+                    <div class="card-body p-4 text-muted">
+                        No articles yet. Stay tuned.
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fallback for anonymous users -->
+<section class="py-5 my-5" data-o-anonymous>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                {% include signup-wall.html %}
+            </div>
+        </div>
+    </div>
+</section>

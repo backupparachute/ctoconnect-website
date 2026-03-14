@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -70,82 +70,39 @@
             color: white;
         }
     </style>
-    
+
     {% seo %}
-    
+
     <!-- Fathom - beautiful, simple website analytics -->
     <script src="https://cdn.usefathom.com/script.js" data-site="VHUVYNME" defer></script>
     <!-- / Fathom -->
 
+    <!-- Outseta -->
     <script>
         var o_options = {
             domain: 'cto-connect.outseta.com',
-            load: 'auth,customForm,emailList,leadCapture,nocode,profile,support'
+            load: 'auth,customForm,emailList,leadCapture,nocode,profile,support',
+            nocode: {
+                hideBody: true,
+                clearQuerystring: true
+            }
         };
-        </script>
-        <script src="https://cdn.outseta.com/outseta.min.js"
-                data-options="o_options">
-        </script>
+    </script>
+    <script src="https://cdn.outseta.com/outseta.min.js"
+            data-options="o_options">
+    </script>
+
+    <!-- Enhanced content protection -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://ctoconnect.io" />
+    </noscript>
+    <script>
+        (!!window.Outseta) || (window.location.href = window.location.origin);
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="{{ site.baseurl }}/">
-                <svg width="200" height="50" viewBox="0 0 200 50">
-                    <text x="5" y="35"
-                          font-family="'Caveat', cursive"
-                          font-size="32"
-                          font-weight="700"
-                          fill="#000000">CTOConnect</text>
-
-                    <defs>
-                        <linearGradient id="nav-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#6b21a8;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <path d="M5,42 L175,40"
-                          stroke="url(#nav-gradient)"
-                          stroke-width="2.5"
-                          stroke-linecap="round"/>
-                </svg>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#why">Why This Exists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#who">Who This Is For</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#how">How It Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Pricing</a>
-                    </li>
-                    <!-- Show when logged OUT -->
-                    <li class="nav-item" data-o-anonymous>
-                        <a class="nav-link" href="https://cto-connect.outseta.com/auth?widgetMode=login#o-anonymous">Log In</a>
-                    </li>
-                    <li class="nav-item" data-o-anonymous>
-                        <a class="btn btn-purple btn-sm ms-lg-2" href="https://cto-connect.outseta.com/auth?widgetMode=register&planUid=nmDKPxWy#o-anonymous">Sign Up</a>
-                    </li>
-                    <!-- Show when logged IN -->
-                    <li class="nav-item" data-o-authenticated>
-                        <a class="nav-link" href="https://cto-connect.outseta.com/profile#o-authenticated">Profile</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    {% include nav.html %}
 
     <!-- Main Content -->
     <main>
@@ -198,13 +155,15 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Smooth scrolling for anchor links -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
                     target.scrollIntoView({
                         behavior: 'smooth',

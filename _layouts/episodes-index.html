@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<section class="py-5" data-o-authenticated>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4 fw-bold mb-2 handwritten text-purple">Office Hours Episodes</h1>
+                <p class="lead text-muted mb-5">Recorded sessions from past office hours. Catch up on what you missed.</p>
+
+                {% assign episode_count = site.episodes | size %}
+                {% if episode_count > 0 %}
+                <div class="row">
+                    {% for episode in site.episodes reversed %}
+                        {% include episode-card.html episode=episode %}
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="card shadow-sm rounded-3 border-0">
+                    <div class="card-body p-4 text-muted">
+                        No episodes yet. Check back after the first office hours session.
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fallback for anonymous users -->
+<section class="py-5 my-5" data-o-anonymous>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                {% include signup-wall.html %}
+            </div>
+        </div>
+    </div>
+</section>

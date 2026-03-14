@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <svg width="200" height="50" viewBox="0 0 200 50">
+                <text x="5" y="35"
+                      font-family="'Caveat', cursive"
+                      font-size="32"
+                      font-weight="700"
+                      fill="#000000">CTOConnect</text>
+
+                <defs>
+                    <linearGradient id="nav-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#6b21a8;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path d="M5,42 L175,40"
+                      stroke="url(#nav-gradient)"
+                      stroke-width="2.5"
+                      stroke-linecap="round"/>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Always visible -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/articles/">Articles</a>
+                </li>
+
+                <!-- Show when logged OUT -->
+                <li class="nav-item" data-o-anonymous>
+                    <a class="nav-link" href="{{ site.baseurl }}/#pricing">Pricing</a>
+                </li>
+                <li class="nav-item" data-o-anonymous>
+                    <a class="nav-link" href="https://cto-connect.outseta.com/auth?widgetMode=login#o-anonymous">Log In</a>
+                </li>
+                <li class="nav-item" data-o-anonymous>
+                    <a class="btn btn-purple btn-sm ms-lg-2" href="https://cto-connect.outseta.com/auth?widgetMode=register&planUid=nmDKPxWy#o-anonymous">Sign Up</a>
+                </li>
+
+                <!-- Show when logged IN -->
+                <li class="nav-item" data-o-authenticated>
+                    <a class="nav-link" href="{{ site.baseurl }}/dashboard/">Dashboard</a>
+                </li>
+                <li class="nav-item" data-o-authenticated>
+                    <a class="nav-link" href="{{ site.baseurl }}/episodes/">Episodes</a>
+                </li>
+                <li class="nav-item" data-o-authenticated>
+                    <a class="nav-link" href="https://cto-connect.outseta.com/profile#o-authenticated">My Account</a>
+                </li>
+                <li class="nav-item" data-o-authenticated>
+                    <a class="nav-link" href="#" onclick="Outseta.auth.logout(); return false;">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
