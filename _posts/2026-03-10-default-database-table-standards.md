@@ -2,7 +2,7 @@
 title: "Default Standards Every Database Table Should Follow"
 description: "Most database headaches come from inconsistent conventions established in the first month. A few defaults prevent years of pain."
 author: "Kyle Miller"
-members_only: false
+members_only: true
 teaser: "Most database messes start with inconsistent basics. A few simple defaults prevent years of pain."
 tags:
   - database

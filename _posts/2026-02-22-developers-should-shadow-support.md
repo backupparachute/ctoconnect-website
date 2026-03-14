@@ -2,7 +2,7 @@
 title: "Developers Should Shadow Customer Support"
 description: "The fastest way to improve your product is to make your engineers listen to the people who use it."
 author: "Kyle Miller"
-members_only: false
+members_only: true
 teaser: "Your roadmap says one thing. Your support inbox says something completely different. Guess which one your customers care about."
 tags:
   - product

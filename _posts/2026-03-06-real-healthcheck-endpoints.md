@@ -2,7 +2,7 @@
 title: "Why Every Production App Needs a Real Healthcheck Endpoint"
 description: "If your healthcheck only confirms the process is running, it's hiding the problems that actually take you down."
 author: "Kyle Miller"
-members_only: false
+members_only: true
 teaser: "If your healthcheck just returns 200 OK, it's lying to you. A real healthcheck tests the things that actually break."
 tags:
   - devops

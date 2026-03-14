@@ -2,7 +2,7 @@
 title: "Honeypot Fields. The Simplest Way to Stop Form Spam."
 description: "Before you reach for CAPTCHA, try the trick that stops 90% of bots without annoying a single real user."
 author: "Kyle Miller"
-members_only: false
+members_only: true
 teaser: "CAPTCHAs annoy real users. Honeypot fields catch bots without anyone noticing. Sometimes the simplest solution wins."
 tags:
   - security
