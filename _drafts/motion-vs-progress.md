@@ -26,6 +26,6 @@ Motion is everything else. It might be necessary. Refactors sometimes are. Meeti
 
 ## What to Do About It
 
-Start asking one question at every standup and every sprint review: what did we ship? Not what did we work on. Not what's in progress. What's done, deployed, and in front of users?
+Start asking one question at every standup and every sprint review. What did we ship? Not what did we work on. Not what's in progress. What's done, deployed, and in front of users?
 
 Teams that measure motion will optimize for motion. Teams that measure shipped outcomes will optimize for shipped outcomes. Pick the right metric.

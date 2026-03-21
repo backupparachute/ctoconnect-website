@@ -10,7 +10,7 @@ tags:
   - pragmatism
 ---
 
-I'll say it upfront: I'm biased. I've spent my career working with engineering teams, and I believe humans are essential to building good software. But bias aside, I've also seen enough patterns repeat to know where this is going.
+I'll say it upfront. I'm biased. I've spent my career working with engineering teams, and I believe humans are essential to building good software. But bias aside, I've also seen enough patterns repeat to know where this is going.
 
 AI is genuinely impressive right now. It can write code, review code, generate tests, scaffold entire projects. If you're not using it, you're leaving productivity on the table. That's not the argument.
 
@@ -30,4 +30,4 @@ Full AI without human oversight will produce the same outcome. Different technol
 
 I'm firmly in the camp of keeping humans in the software lifecycle. Maybe forever. Definitely for a long time. Use AI aggressively as a tool. Let it handle the repetitive work, the boilerplate, the first drafts. But keep people who understand your system, your users, and your business making the decisions that matter.
 
-Teams that go full AI with no oversight will ship faster right up until they hit a wall. And the wall will be expensive.
+Teams that go full AI with no oversight will ship faster right up until they hit a wall. The wall will be expensive.
