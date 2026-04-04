@@ -8,7 +8,7 @@ permalink: /terms/
 <section class="py-5">
 <div class="container">
 <div class="row">
-<div class="col-lg-8 mx-auto">
+<div class="col-lg-8 mx-auto" markdown="1">
 
 <h1 class="display-5 fw-bold mb-4">Terms of Service</h1>
 <p class="text-muted mb-4">Last updated: April 4, 2026</p>
@@ -52,7 +52,7 @@ We may update these terms from time to time. We will notify members of material 
 
 ## Contact
 
-Questions about these terms? Contact us at [kyle@ctoconnect.io](mailto:kyle@ctoconnect.io).
+Questions about these terms? Use the contact form on our website.
 
 </div>
 </div>

@@ -25,22 +25,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <!-- Always visible -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/about/">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/articles/">Articles</a>
-                </li>
-
                 <!-- Show when logged OUT -->
                 <li class="nav-item" data-o-anonymous>
-                    <a class="nav-link" href="{{ site.baseurl }}/#pricing">Pricing</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/about/">About</a>
+                </li>
+                <li class="nav-item" data-o-anonymous>
+                    <a class="nav-link" href="{{ site.baseurl }}/articles/">Articles</a>
+                </li>
+                <li class="nav-item" data-o-anonymous>
+                    <a class="nav-link" href="{{ site.baseurl }}/pricing/">Pricing</a>
                 </li>
                 <li class="nav-item" data-o-anonymous>
                     <a class="nav-link" href="https://cto-connect.outseta.com/auth?widgetMode=login#o-anonymous">Log In</a>
                 </li>
-                <li class="nav-item" data-o-anonymous>
+                <li class="nav-item d-flex align-items-center" data-o-anonymous>
                     <a class="btn btn-purple btn-sm ms-lg-2" href="https://cto-connect.outseta.com/auth?widgetMode=register&planUid=nmDKPxWy#o-anonymous">Sign Up</a>
                 </li>
 
@@ -52,10 +50,13 @@
                     <a class="nav-link" href="{{ site.baseurl }}/episodes/">Episodes</a>
                 </li>
                 <li class="nav-item" data-o-authenticated>
+                    <a class="nav-link" href="{{ site.baseurl }}/articles/">Articles</a>
+                </li>
+                <li class="nav-item" data-o-authenticated>
                     <a class="nav-link" href="https://cto-connect.outseta.com/profile#o-authenticated">My Account</a>
                 </li>
                 <li class="nav-item" data-o-authenticated>
-                    <a class="nav-link" href="#" onclick="Outseta.auth.logout(); return false;">Log Out</a>
+                    <a class="nav-link" href="#" data-o-logout-link="1">Log Out</a>
                 </li>
             </ul>
         </div>

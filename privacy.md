@@ -8,7 +8,7 @@ permalink: /privacy/
 <section class="py-5">
 <div class="container">
 <div class="row">
-<div class="col-lg-8 mx-auto">
+<div class="col-lg-8 mx-auto" markdown="1">
 
 <h1 class="display-5 fw-bold mb-4">Privacy Policy</h1>
 <p class="text-muted mb-4">Last updated: April 4, 2026</p>
@@ -58,7 +58,7 @@ You have the right to:
 
 ## Contact
 
-For privacy-related questions or requests, contact us at [kyle@ctoconnect.io](mailto:kyle@ctoconnect.io).
+For privacy-related questions or requests, use the contact form on our website.
 
 </div>
 </div>
