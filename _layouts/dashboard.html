@@ -11,6 +11,7 @@ layout: default
                 <p class="lead text-muted mb-5">Your CTOConnect member dashboard.</p>
 
                 <!-- Upcoming Session -->
+                {% if page.next_session_date and page.next_session_date != "" %}
                 <div class="card shadow-sm rounded-3 border-0 bg-purple text-white mb-5">
                     <div class="card-body p-4">
                         <h2 class="handwritten fs-2 mb-3">Next Office Hours</h2>
@@ -24,6 +25,7 @@ layout: default
                         {% endif %}
                     </div>
                 </div>
+                {% endif %}
 
                 <!-- Recent Episodes -->
                 <h2 class="handwritten fs-1 text-teal mb-4">Recent Episodes</h2>
