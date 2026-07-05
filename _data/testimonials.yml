@@ -1,0 +1,22 @@
+# Single source of truth for testimonials, rendered via _includes/testimonials.html.
+# Images live in /assets/images/testimonials/.
+- name: Julien de Bats
+  title: Startup Founder
+  image: julien.png
+  quote: >-
+    His insights were invaluable, providing me with the confidence and peace of
+    mind I needed to move forward. I highly recommend Kyle...
+- name: Meddy Ali
+  title: Tech Lead
+  image: meddy.png
+  quote: >-
+    Kyle's advice is extremely valuable... We were lost and needed someone to
+    tell us exactly where we can improve our process without fluffing things
+    up... Kyle did exactly that...
+- name: Greg Toumayan
+  title: CMC Incentives
+  image: greg.jpeg
+  link: https://www.linkedin.com/in/greg-toumayan/
+  quote: >-
+    Kyle brings the rare mix of strategic thinking, technical depth, and crisp
+    communication. He jumped in fast and added value immediately.
