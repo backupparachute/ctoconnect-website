@@ -1,0 +1,17 @@
+{%- comment -%}
+Renders the testimonial cards from _data/testimonials.yml (single source of truth).
+Optional param:
+  quote_class - Bootstrap font-size class for the quote (default: fs-5)
+{%- endcomment -%}
+{%- assign quote_class = include.quote_class | default: "fs-5" -%}
+{%- for t in site.data.testimonials %}
+                <div class="card shadow-sm rounded-3 mb-4 border-0">
+                    <div class="card-body p-5">
+                        <p class="mb-4 {{ quote_class }} fst-italic">"{{ t.quote }}"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="{{ site.baseurl }}/assets/images/testimonials/{{ t.image }}" alt="{{ t.name }}" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+                            <p class="mb-0">{% if t.link %}<a href="{{ t.link }}" target="_blank" class="text-decoration-none text-dark"><strong>{{ t.name }}</strong></a>{% else %}<strong>{{ t.name }}</strong>{% endif %}<br><span class="text-muted">{{ t.title }}</span></p>
+                        </div>
+                    </div>
+                </div>
+{%- endfor %}
