@@ -1,5 +1,5 @@
 ---
-title: "Use AI Like a Junior Dev"
+title: "Treat AI Like a Junior Dev"
 description: "AI coding tools are useful when you treat them like a junior developer. Give clear tasks, review everything, and never let them make architecture decisions."
 author: "Kyle Miller"
 members_only: false
