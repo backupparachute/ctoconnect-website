@@ -24,6 +24,6 @@ Rate limiting on authentication endpoints. Login, password reset, signup. If som
 
 Principle of least privilege. Your application database user doesn't need DROP TABLE permissions. Your staging environment doesn't need access to production data. Give everything the minimum access it needs to function.
 
-Backups that you've tested restoring. Having backups is not the same as being able to recover. If you've never done a restore drill, you don't have backups. You have hope.
+Test your backups by restoring them. Having backups is not the same as being able to recover. If you've never done a restore drill, you don't have backups. You have hope.
 
 None of this is glamorous. All of it will save you when something eventually goes sideways.
