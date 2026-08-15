@@ -1,6 +1,5 @@
 ---
 title: "Aggregation Is Not Retrieval"
-subtitle: "Be careful where you do your math."
 description: "An AI reporting tool that lets the model add up rows returns numbers you cannot audit. Aggregation needs completeness. Retrieval only gives relevance."
 author: "Kyle Miller"
 members_only: false
@@ -17,8 +16,10 @@ That happens when the tool pulls rows into context and lets the model add them u
 
 Models drift on long addition chains. Run the same question twice, get two totals. But the worse problem is what it added. Aggregation needs completeness. Retrieval gives relevance. Semantic search returns the rows most related to your question, not every row that matches it. Ask for a total across three thousand records and it may pull four hundred, sum those, and report it as final. Similarity is not a WHERE clause.
 
-So do the math where it leaves a trace. The model writes a query, the database executes it, the model reads back the result. Model at the edges, never in the middle of the arithmetic. Now the sum is exact, and you have something an auditor can rerun.
+So put the arithmetic somewhere that leaves a trace. The model writes a query, the database executes it, the model reads back the result. Model at the edges, never in the middle of the arithmetic. Now the sum is exact, and you have something an auditor can rerun.
 
 Ask any vendor one question. When I request a total across all records, what executes the sum? If the answer involves embeddings or retrieval, walk.
 
 Exploration is fine. Anything landing in a board deck needs a query somebody reviewed.
+
+Be careful where you do your math.
