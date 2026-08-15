@@ -10,26 +10,26 @@ tags:
   - pragmatism
 ---
 
-A client called me about a company-wide AI reporting system they'd been sold. Pull from every internal system, let agents learn it, then ask any question in plain English. The demo was impressive.
+A client called me about a company-wide AI reporting system they'd been sold. Pull from every internal system, let agents learn it, ask anything in plain English. The demo was impressive.
 
-What they had asked for, without realizing it, was a full ERP data integration. "AI across all our data" is one sentence in a meeting and a staffed project at a large company. Tens of millions in revenue, not hundreds. They had ordered a big system at big system prices and nobody said so.
+What they had asked for, without realizing it, was a full ERP data integration. "AI across all our data" is one sentence in a meeting and a staffed project at a big company. Tens of millions in revenue, not hundreds. They had ordered a big system at big system prices and nobody said so.
 
-Nobody had measured any of it either. Every layer below bills separately.
+Nobody had measured it either. Every layer bills separately.
 
-**Moving the data.** Every source system has to be pulled continuously, not once. Some vendors bill per API call or per record, and that meter runs forever.
+**Moving the data.** Pulled continuously, not once. Some vendors bill per API call or per record, and that meter never stops.
 
-**Storing the data.** You store it more than once. Raw copy, cleaned copy, warehouse copy, embeddings. The same information four times, growing every month, and none of it shrinks.
+**Storing the data.** Raw copy, cleaned copy, warehouse copy, embeddings. The same information four times, growing monthly.
 
-**Querying the data.** Warehouses bill by bytes scanned. "Compare the last eighteen months against the same months two years ago across every cost center" reads an enormous number of rows to return one.
+**Querying the data.** Warehouses bill by bytes scanned. "Compare eighteen months against the same months two years ago across every cost center" reads an enormous number of rows to return one.
 
-**Running the agent.** It doesn't answer that in one shot. It plans, queries, reads the result, and queries again. One question becomes dozens of calls, and eleven managers ask it every Monday. The AI layer is not cheap either.
+**Running the agent.** Not one shot. It plans, queries, reads, queries again. One question becomes dozens of calls, times eleven managers every Monday. The AI layer is not cheap either.
 
-Building the sync came to tens of thousands in engineering. Warehouse, ingress, storage and backups looked like a four figure monthly bill before a single AI query ran.
+The sync alone was tens of thousands in engineering. Warehouse, ingress, storage and backups added a four figure monthly bill before a single AI query ran.
 
-Maybe the vendor had it all costed. The client couldn't tell me, and that's what should worry you. If you can't separate model spend from data spend, you can't tell whether a quote is complete.
+Maybe the vendor had it costed. The client couldn't tell me, which is the real problem. If you can't separate model spend from data spend, you can't tell whether a quote is complete.
 
-So know your limits before you take that meeting. What's a material monthly bill at your size? How much data do you have? Which questions does your team ask often enough to justify this?
+So know your limits first. What's a material monthly bill at your size? How much data do you have? Which questions get asked often enough to justify this?
 
-I made them a different offer. Tell me the questions you want answered and I'll write the SQL and build the dashboards. That's what we did, at a fraction of the quote.
+I offered them something else. Tell me the questions and I'll write the SQL and build the dashboards. That's what we did, at a fraction of the quote.
 
-The platform might be right for you one day. Find out what a few queries and a dashboard cover first. It's usually most of it.
+The platform might be right one day. Find out what a few queries and a dashboard cover first. Usually that's most of it.
