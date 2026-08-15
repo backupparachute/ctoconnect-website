@@ -12,18 +12,16 @@ tags:
 
 I do fractional CTO work. Read the rest with that in mind.
 
-Part time technical leadership works well in a specific window. You have a small team, the expensive decisions are infrequent, and what you need is judgment rather than daily presence. A few hours a week from someone who has seen the failure modes will save you a year.
+Part time leadership works in a specific window. Small team, expensive decisions that come up rarely, and what you need is judgment rather than daily presence. A few hours a week from someone who has seen the failure modes saves you a year.
 
 That window closes. Here's how you know.
 
-Your engineers need decisions faster than a weekly call. When four people sit blocked on Tuesday waiting for Thursday, the cost of waiting has passed the cost of a salary.
+Your engineers need decisions faster than a weekly call. When four people sit blocked on Tuesday waiting for Thursday, waiting costs more than a salary.
 
-Hiring has become your main constraint. Recruiting engineers is a full time job when you do it well. It needs someone in your building who can sell the mission and sit in on every loop.
+Hiring has become your main constraint. Recruiting well is a full time job, and it needs someone in your building who can sell the mission.
 
-Your technical strategy now spans quarters instead of decisions. Choosing a database is a decision. Owning a two year migration while shipping features is a job.
+Your strategy spans quarters instead of decisions. Choosing a database is a decision. Owning a two year migration while shipping features is a job.
 
-Your team has grown past six or seven engineers. Somewhere in there, people stop coordinating by talking to each other, and someone has to own how the group works.
+Your team has passed six or seven engineers. People stop coordinating by talking to each other, and someone has to own how the group works.
 
-None of that is about capability. A fractional CTO can be the most experienced person you've worked with and still be the wrong shape for a team that needs someone there on Wednesday afternoon.
-
-If two or more of these describe you, start looking. Good technical leaders take six months to hire. Start before you're desperate.
+None of that is about capability. If two or more describe you, start looking. Good technical leaders take six months to hire.

@@ -12,18 +12,16 @@ tags:
 
 The product works. Customers use it. And every person who knows why it was built that way has moved to another client.
 
-This is a normal way to start. It's also where founders make an expensive mistake, which is deciding the code is garbage and needs a rewrite. Sometimes it is garbage. You can't tell yet, and neither can the engineer you hired last week who has been reading it since Monday.
+The expensive mistake here is deciding the code is garbage and needs a rewrite. Sometimes it is. You can't tell yet, and neither can the engineer who started Monday.
 
 Spend the first month on control instead.
 
-Get the keys. Every account, every domain, every deploy credential, every third party service, in your name and not the agency's. Do this before anything else. Agencies go out of business.
+Get the keys. Every account, every domain, every deploy credential, in your name and not the agency's. Do this before anything else. Agencies go out of business.
 
-Prove you can deploy. Not "the agency deployed it." You, or someone you employ, pushing a small change to production and watching it land. If you can't do that, nothing else on this list matters.
+Prove you can deploy. Not "the agency deployed it." You, pushing a small change to production and watching it land.
 
 Prove you can restore. Take the backup, load it somewhere else, confirm the data is there.
 
-Then read the code with a specific question. Not "is this good." Ask what happens when a customer signs up, and follow that path all the way through. You'll learn more about the architecture from one path than from a week of skimming files.
+Then read the code with one question. Ask what happens when a customer signs up, and follow that path all the way through. You'll learn more from one path than a week of skimming files.
 
-Write down what you find as you go. You're the last person who will ever see this codebase without knowing how it works.
-
-Rewrite decisions come later, once you understand what you have. Most of the time you'll find code that's fine and documentation that never existed.
+Rewrite decisions come later. Most of the time you'll find code that's fine and documentation that never existed.

@@ -10,18 +10,18 @@ tags:
   - pragmatism
 ---
 
-Engineers hate estimates for a good reason. They gave a number once, someone wrote it on a roadmap, and the number became a promise they never made.
+Engineers hate estimates for a good reason. They gave a number once, someone wrote it on a roadmap, and it became a promise they never made.
 
-So they stop giving numbers. "It'll take as long as it takes." "I can't know until I start."
+So they stop giving numbers. "It'll take as long as it takes."
 
-Both are true. Both are useless to the person deciding whether to hire a salesperson in November.
+True, and useless to the person deciding whether to hire a salesperson in November.
 
-Give the number. Attach the uncertainty to it, out loud, in writing.
+Give the number. Attach the uncertainty out loud, in writing.
 
 "Two weeks if the payment provider's API works the way the docs say. Four if it doesn't. I'll know which by Wednesday."
 
-That sentence does three things a bare number can't. It commits to something. It names the specific risk. It says when the risk resolves. Now your CEO can plan around Wednesday instead of around a date five weeks out that everyone privately doubts.
+That does something a bare number can't. It commits, it names the risk, and it says when the risk resolves. Now your CEO plans around Wednesday instead of a date five weeks out that everyone privately doubts.
 
-The trap is precision. "Six and a half weeks" sounds rigorous and means nothing. Ranges are honest. Round numbers are honest. False precision is what gets you held to a date you invented on a Tuesday.
+The trap is precision. "Six and a half weeks" sounds rigorous and means nothing. Ranges are honest. False precision gets you held to a date you invented on a Tuesday.
 
-Estimates improve when you compare them against what happened. Write down what you guessed. Check it when you ship. You'll be wrong for the same handful of reasons every time, and once you know them, you can price them in.
+Write down what you guessed. Check it when you ship. You'll be wrong for the same handful of reasons every time, and then you can price them in.

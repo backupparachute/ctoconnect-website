@@ -12,14 +12,14 @@ tags:
 
 Every few months a founder asks whether they should build on something new. A different database. A newer framework. A language their lead engineer wants to try.
 
-The answer is almost always no.
+Almost always no.
 
-Boring technology has one property nothing else has. You know how it fails, and you know someone has hit your exact problem and written it down. When it breaks at 2 AM, the answer is on the second page of search results instead of in a GitHub issue with no replies.
+Boring technology has one property nothing else has. You know how it fails, and someone has hit your exact problem and written it down. When it breaks at 2 AM the answer is on the second page of search results, not in a GitHub issue with no replies.
 
-New technology charges you for the privilege of being early. You pay in debugging time, missing libraries, thin documentation, and hiring difficulty. Sometimes that price is worth it. Most of the time you are paying it to solve a problem you don't have.
+New technology charges you for being early. You pay in debugging time, thin documentation, and hiring difficulty. Sometimes that price is worth it. Usually you're paying it to solve a problem you don't have.
 
-Postgres handles more than you think. It does JSON. It does full text search. It does queuing if you ask nicely. Teams reach for four specialized data stores when one would carry them to Series B.
+Postgres handles more than you think. JSON, full text search, queuing if you ask nicely. Teams reach for four specialized data stores when one would carry them to Series B.
 
-Here's the test I use. Can you name the specific limitation of your current tool that is blocking you today? Not a limitation you read about. One you have hit. If you can't name it, you don't have a technology problem. You have a curiosity problem, and curiosity is cheaper to satisfy on a weekend project.
+Here's the test. Name the specific limitation of your current tool that is blocking you today. Not one you read about. One you have hit. If you can't name it, you don't have a technology problem.
 
-You get a small budget for interesting choices. Spend it on the part of your product nobody else has built. Spend the rest on tools so dull nobody writes conference talks about them.
+You get a small budget for interesting choices. Spend it on the part of your product nobody else has built.

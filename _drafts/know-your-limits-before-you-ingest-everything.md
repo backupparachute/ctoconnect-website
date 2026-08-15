@@ -14,22 +14,10 @@ A client called me about a company-wide AI reporting system they'd been sold. Pu
 
 What they had asked for, without realizing it, was a full ERP data integration. "AI across all our data" is one sentence in a meeting and a staffed project at a big company. Tens of millions in revenue, not hundreds. They had ordered a big system at big system prices and nobody said so.
 
-Nobody had measured it either. Every layer bills separately.
+Every layer bills separately. Moving the data, pulled continuously and metered per call. Storing it four times over as raw, cleaned, warehoused, embedded. Querying it, where warehouses charge by bytes scanned and one question about eighteen months of cost centers reads an enormous number of rows. Then the agent, which answers that in dozens of calls, times eleven managers every Monday.
 
-**Moving the data.** Pulled continuously, not once. Some vendors bill per API call or per record, and that meter never stops.
+The sync alone was tens of thousands in engineering. The rest added a four figure monthly bill before a single AI query ran. Maybe the vendor had it costed. The client couldn't tell me, which is the problem.
 
-**Storing the data.** Raw copy, cleaned copy, warehouse copy, embeddings. The same information four times, growing monthly.
-
-**Querying the data.** Warehouses bill by bytes scanned. "Compare eighteen months against the same months two years ago across every cost center" reads an enormous number of rows to return one.
-
-**Running the agent.** Not one shot. It plans, queries, reads, queries again. One question becomes dozens of calls, times eleven managers every Monday. The AI layer is not cheap either.
-
-The sync alone was tens of thousands in engineering. Warehouse, ingress, storage and backups added a four figure monthly bill before a single AI query ran.
-
-Maybe the vendor had it costed. The client couldn't tell me, which is the real problem. If you can't separate model spend from data spend, you can't tell whether a quote is complete.
-
-So know your limits first. What's a material monthly bill at your size? How much data do you have? Which questions get asked often enough to justify this?
+So know your limits first. What's a material monthly bill at your size? Which questions get asked often enough to justify this?
 
 I offered them something else. Tell me the questions and I'll write the SQL and build the dashboards. That's what we did, at a fraction of the quote.
-
-The platform might be right one day. Find out what a few queries and a dashboard cover first. Usually that's most of it.
