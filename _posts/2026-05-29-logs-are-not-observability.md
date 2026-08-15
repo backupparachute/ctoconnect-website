@@ -14,13 +14,13 @@ Something breaks in production. The on-call engineer opens a terminal and starts
 
 Logs, metrics, and traces solve different problems. Mixing them up is why most teams spend hours debugging issues that should take minutes.
 
-Metrics tell you something is wrong. Request latency spiked. Error rate jumped. CPU is pegged. You don't need to know why yet. You need to know where to look.
+Metrics tell you something is wrong. Request latency spiked. Error rate jumped. You don't need to know why yet. You need to know where to look.
 
 Traces tell you where it's wrong. A single request touched seven services and the third one took four seconds. Now you know which service to investigate. Without traces, you're guessing which log file to open.
 
-Logs tell you why it's wrong. Once you know the service, the timestamp, and the request ID, logs become useful. A stack trace, a failed query, a nil pointer. That's the detail you need. But only after metrics and traces pointed you there.
+Logs tell you why it's wrong. Once you know the service and the request ID, logs become useful. A stack trace. A failed query. That's the detail you need. But only after metrics and traces pointed you there.
 
-There's a fourth layer worth mentioning. Error tracking services like Honeybadger, Sentry, or Bugsnag. These sit between metrics and logs. They catch exceptions in real time, group them, and give you the stack trace with context before you even know something is wrong. If you don't have full observability yet, an error tracker is the fastest win you can add.
+There's a fourth layer. Error tracking services like Honeybadger, Sentry, or Bugsnag. These sit between metrics and logs. They catch exceptions in real time and give you the stack trace with context before you even know something is wrong. If you don't have full observability yet, an error tracker is the fastest win you can add.
 
 Most teams have logs and nothing else. They bolt on a dashboard with some graphs and call it monitoring. Then an incident hits and they're back in the terminal scrolling through text files.
 

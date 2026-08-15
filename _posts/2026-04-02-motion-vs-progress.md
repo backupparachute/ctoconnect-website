@@ -10,7 +10,7 @@ tags:
   - process
 ---
 
-Every standup sounds productive. People are busy. Tickets are moving. Branches are getting merged. But when you zoom out and ask what actually shipped this month, the room gets quiet.
+Every standup sounds productive. People are busy. Tickets move. Branches merge. But when you zoom out and ask what shipped this month, the room gets quiet.
 
 That's motion. It feels like progress. It looks like progress in every dashboard and status report. But it's not.
 
@@ -28,4 +28,4 @@ Motion is everything else. It might be necessary. Refactors sometimes are. Meeti
 
 Start asking one question at every standup and every sprint review. What did we ship? Not what did we work on. Not what's in progress. What's done, deployed, and in front of users?
 
-Teams that measure motion will optimize for motion. Teams that measure shipped outcomes will optimize for shipped outcomes. Pick the right metric.
+Teams that measure motion get more motion. Teams that measure shipped outcomes get shipped outcomes. Pick the right metric.

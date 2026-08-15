@@ -16,7 +16,7 @@ The trick is never to say no. Say "yes, if" or "yes, but here's what it costs."
 
 "We can do this by Friday if we pull two engineers off the billing migration. That pushes billing back two weeks. Do you want to make that trade?"
 
-Now it's a business decision, not an engineering objection. You've given them the information they need to prioritize. Most of the time, they'll reprioritize on their own once they see the tradeoff.
+Now it's a business decision instead of an engineering objection. You've given them the information they need to prioritize. Most of the time, they'll reprioritize on their own once they see the tradeoff.
 
 What doesn't work is saying "that's too hard" or "we don't have time." Those sound like excuses. CEOs hear that and think engineering is the bottleneck. They start looking for ways around you instead of through you.
 
