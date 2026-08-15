@@ -18,12 +18,12 @@ HTTPS everywhere. No exceptions. Not even for internal services. Free with Let's
 
 Secrets out of your code. No API keys in your repo. No database passwords in config files that get committed. Use environment variables or a secrets manager. If you grep your repo and find a password, fix it today.
 
-Dependency audits. Run `npm audit` or `bundle audit` or whatever your ecosystem has. Do it in CI so it can't be skipped. Outdated dependencies with known vulnerabilities are the easiest attack vector that exists.
+Dependency audits. Run `npm audit` or `bundle audit` or whatever your stack has. Do it in CI so it can't be skipped. Outdated dependencies with known vulnerabilities are the easiest attack vector that exists.
 
 Rate limiting on authentication endpoints. Login, password reset, signup. If someone can hit your login endpoint a million times, they will.
 
 Principle of least privilege. Your application database user doesn't need DROP TABLE permissions. Your staging environment doesn't need access to production data. Give everything the minimum access it needs to function.
 
-Backups that you've actually tested restoring. Having backups is not the same as being able to recover. If you've never done a restore drill, you don't have backups. You have hope.
+Backups that you've tested restoring. Having backups is not the same as being able to recover. If you've never done a restore drill, you don't have backups. You have hope.
 
 None of this is glamorous. All of it will save you when something eventually goes sideways.

@@ -10,11 +10,11 @@ tags:
   - pragmatism
 ---
 
-I'll say it upfront. I'm biased. I've spent my career working with engineering teams, and I believe humans are essential to building good software. But bias aside, I've also seen enough patterns repeat to know where this is going.
+I'll say it upfront. I'm biased. I've spent my career working with engineering teams, and I believe you need humans to build good software. But bias aside, I've also seen enough patterns repeat to know where this is going.
 
 AI is genuinely impressive right now. It can write code, review code, generate tests, scaffold entire projects. If you're not using it, you're leaving productivity on the table. That's not the argument.
 
-The argument is about what happens when you remove humans from the loop entirely. When you let AI write, review, deploy, and maintain code without anyone who understands the system actually looking at it.
+The argument is about what happens when you remove humans from the loop entirely. When you let AI write, review, deploy, and maintain code without anyone who understands the system looking at it.
 
 I've seen enough sci-fi to know that machines building machines on their own doesn't end well. But you don't need science fiction to find cautionary tales. We already ran this experiment. It was called offshoring.
 
@@ -24,10 +24,10 @@ A decade ago, companies decided they could replace their engineering teams with 
 
 In practice, teams lost context. Architectural decisions got made without understanding the business. Technical debt piled up invisibly. When something broke at 2 AM, nobody on the call understood the system well enough to fix it quickly. The companies that went all-in without any internal oversight paid for it in years of cleanup.
 
-Full AI without human oversight will produce the same outcome. Different technology, same mistake. Code gets generated without understanding why. Patterns get replicated without knowing the constraints that shaped them. Edge cases get missed because the AI optimized for the common path.
+Full AI without human oversight will produce the same outcome. Different technology, same mistake. Code gets generated without understanding why. Patterns get replicated without knowing the constraints that shaped them. Edge cases get missed because the AI went for the common path.
 
 ## Where I Land
 
-I'm firmly in the camp of keeping humans in the software lifecycle. Maybe forever. Definitely for a long time. Use AI aggressively as a tool. Let it handle the repetitive work, the boilerplate, the first drafts. But keep people who understand your system, your users, and your business making the decisions that matter.
+I'm firmly in the camp of keeping humans in the software lifecycle. Maybe forever. Definitely for a long time. Use AI aggressively as a tool. Let it handle the boilerplate and the first drafts. But keep people who understand your system and your business making the decisions that matter.
 
 Teams that go full AI with no oversight will ship faster right up until they hit a wall. The wall will be expensive.
