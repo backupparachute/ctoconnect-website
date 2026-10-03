@@ -5,7 +5,7 @@ Internal. Jekyll skips folders that start with `_`, so this file is never publis
 ## The page
 
 - URL: `https://ctoconnect.io/talk/`
-- Unlisted: not linked from nav, not in sitemap, `noindex`. Uses the normal site theme and nav. The nav still shows Pricing and Sign Up, so steer prospects to the two buttons on the page.
+- Unlisted: not linked from nav, not in sitemap, `noindex`. Uses the normal site theme and nav, with the $99 Sign Up button and the footer tagline hidden on this page. The nav still links to Pricing, so steer prospects to the two buttons on the page.
 - Add the opener tag so clicks can be split in Fathom:
   - Lonely founder: `https://ctoconnect.io/talk/?v=lonely`
   - AI: `https://ctoconnect.io/talk/?v=ai`
