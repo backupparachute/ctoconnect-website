@@ -1,0 +1,22 @@
+{%- comment -%}
+Closing call to action used on every service page.
+Optional params:
+  heading - h2 text (default: "Tell me what you're stuck on.")
+  body    - lead paragraph (default below)
+  event   - Fathom event name (default: "Clicked Book Diagnostic CTA")
+{%- endcomment -%}
+{%- assign heading = include.heading | default: "Tell me what you're stuck on." -%}
+{%- assign body = include.body | default: "20 minutes. You tell me what's going on. I tell you what I think is wrong and whether I can help." -%}
+{%- assign event = include.event | default: "Clicked Book Diagnostic CTA" -%}
+<section class="py-5 my-5 bg-purple text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-3 fw-bold mb-4 handwritten">{{ heading }}</h2>
+                <p class="lead mb-4">{{ body }}</p>
+                <a href="{{ site.diagnostic_call_url }}" class="btn btn-teal btn-lg rounded-pill px-5 mb-3" onclick="fathom.trackEvent('{{ event }}')">Book a free diagnostic call</a>
+                <p class="mb-0" style="opacity: 0.8;">A diagnosis. Not a free consulting session.</p>
+            </div>
+        </div>
+    </div>
+</section>

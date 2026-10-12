@@ -1,0 +1,91 @@
+{%- comment -%}
+Newsletter signup. Posts to site.newsletter_endpoint and unlocks [data-gated] content on success.
+Optional param:
+  context - "article" (default) for the gated-article wall, "general" for the end of public pages
+{%- endcomment -%}
+{%- assign context = include.context | default: "article" -%}
+<div class="card shadow rounded-3 border-0 bg-purple text-white ctoc-newsletter">
+    <div class="card-body p-5 text-center">
+        <div class="ctoc-newsletter-form">
+            {%- if context == "article" %}
+            <h3 class="handwritten fs-1 mb-3">The rest of this one is for subscribers</h3>
+            <p class="fs-5 mb-4">Drop your email and the rest appears. You also get the articles I don't publish publicly, now and then. No daily drip.</p>
+            {%- else %}
+            <h3 class="handwritten fs-1 mb-3">Want more like this?</h3>
+            <p class="fs-5 mb-4">Subscribers get the articles I don't publish publicly, now and then. No daily drip.</p>
+            {%- endif %}
+            <form class="row g-2 justify-content-center" novalidate>
+                <div class="col-sm-7">
+                    <label class="visually-hidden" for="ctoc-email-{{ context }}">Email</label>
+                    <input type="email" class="form-control form-control-lg" id="ctoc-email-{{ context }}" name="email" placeholder="you@company.com" required autocomplete="email">
+                </div>
+                <div class="col-sm-auto">
+                    <button type="submit" class="btn btn-teal btn-lg rounded-pill px-4 w-100">Subscribe</button>
+                </div>
+                <!-- Honeypot. Bots fill it, people never see it. -->
+                <div style="position:absolute; left:-10000px;" aria-hidden="true">
+                    <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                </div>
+            </form>
+            <p class="small mt-3 mb-0 ctoc-newsletter-error" style="display:none; opacity: 0.9;">That didn't go through. Try again, or email me at {{ site.author.email }}.</p>
+        </div>
+        <div class="ctoc-newsletter-done" style="display:none;">
+            <h3 class="handwritten fs-1 mb-3">You're in.</h3>
+            {%- if context == "article" %}
+            <p class="fs-5 mb-0">The full article is below.</p>
+            {%- else %}
+            <p class="fs-5 mb-0">Subscriber-only articles are open for you across the site.</p>
+            {%- endif %}
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+    var box = document.currentScript.previousElementSibling;
+    var form = box.querySelector('form');
+    var error = box.querySelector('.ctoc-newsletter-error');
+    var formWrap = box.querySelector('.ctoc-newsletter-form');
+    var done = box.querySelector('.ctoc-newsletter-done');
+
+    function finish() {
+        formWrap.style.display = 'none';
+        done.style.display = '';
+        window.ctocGate.markSubscribed();
+    }
+
+    // Already subscribed: nothing to ask for. Hide the box.
+    if (window.ctocGate.subscribed()) {
+        box.style.display = 'none';
+        return;
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        error.style.display = 'none';
+        var email = form.email.value.trim();
+        if (!form.checkValidity() || !email) {
+            form.email.focus();
+            return;
+        }
+        if (form.website.value) {
+            // Honeypot tripped. Pretend it worked.
+            finish();
+            return;
+        }
+        var button = form.querySelector('button');
+        button.disabled = true;
+        fetch('{{ site.newsletter_endpoint }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, source: window.location.pathname })
+        }).then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            if (window.fathom) fathom.trackEvent('Subscribed Newsletter');
+            finish();
+        }).catch(function () {
+            button.disabled = false;
+            error.style.display = '';
+        });
+    });
+})();
+</script>

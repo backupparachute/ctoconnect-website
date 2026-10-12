@@ -1,158 +1,107 @@
 # CTO Connect Website
 
-A modern, responsive website for CTO Connect - Your On-Call Fractional CTO service. Built with Jekyll and Bootstrap 5.
+The site for [ctoconnect.io](https://ctoconnect.io). Jekyll and Bootstrap 5, hosted on GitHub Pages.
 
-## About CTO Connect
+## What the site sells
 
-CTO Connect provides direct access to Kyle Miller's 25+ years of experience delivering software for Fortune 500s, hedge funds, government agencies, and fast moving startups. For just $99/month, you get unlimited email requests and weekly group calls to help your team get unstuck and stay on track.
+Three services, in order of how involved Kyle is:
 
-## Features
+| Service | Price | What it is |
+|---|---|---|
+| CTO Deep Dive | $600 one-time | One 90-minute working session on one problem. Booked and paid directly through Calendly. |
+| CTO Advisory | $1,800/month | One 90-minute session every week. Nothing between sessions. Starts with a diagnostic call. |
+| Fractional CTO | from $4,000/month | Kyle involved in the company and delivering CTO-level work. Scoped on a diagnostic call. |
 
-- **Responsive Design**: Built with Bootstrap 5 for mobile-first design
-- **Modern UI**: Clean, professional design with smooth animations
-- **SEO Optimized**: Built-in SEO tags and meta descriptions
-- **Fast Loading**: Optimized for performance
-- **Contact Form**: Ready-to-use contact form
-- **GitHub Pages Ready**: Configured for easy deployment
+Every page funnels to the **free 20-minute diagnostic call**. It is a fit conversation, not a free consulting session.
 
-## Technology Stack
+There is no membership, no login and no paid content tier. Some articles are marked `members_only: true` in their front matter. Those show a teaser and a newsletter form. Subscribing opens the article in that browser.
 
-- **Jekyll**: Static site generator
-- **Bootstrap 5**: CSS framework
-- **Font Awesome**: Icons
-- **Google Fonts**: Typography (Inter font family)
-- **Jekyll SEO Tag**: SEO optimization
-- **Jekyll Sitemap**: Automatic sitemap generation
-- **GitHub Pages**: Hosting platform
+## Integrations
 
-## Local Development
+Everything external lives in `_config.yml`:
 
-### Prerequisites
+| Key | Used for |
+|---|---|
+| `diagnostic_call_url` | Calendly event for the free 20-minute call. **TODO: replace the placeholder.** |
+| `deep_dive_url` | Calendly event for the paid Deep Dive. Stripe payment is collected at booking. |
+| `newsletter_endpoint` | Where the newsletter form posts. **TODO: replace the placeholder.** |
 
-- Ruby (2.7 or higher)
-- RubyGems
-- Bundler
+### Newsletter endpoint contract
 
-### Setup
+`_includes/newsletter-form.html` sends:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/ctoconnect-website.git
-   cd ctoconnect-website
-   ```
+```
+POST <newsletter_endpoint>
+Content-Type: application/json
 
-2. Install dependencies:
-   ```bash
-   bundle install
-   ```
-
-3. Start the development server:
-   ```bash
-   bundle exec jekyll serve
-   ```
-
-4. Open your browser and navigate to `http://localhost:4000`
-
-### Building for Production
-
-```bash
-bundle exec jekyll build
+{"email": "you@company.com", "source": "/articles/some-slug/"}
 ```
 
-The built site will be in the `_site` directory.
+Any 2xx response counts as subscribed. The form then sets `localStorage.ctoc_subscribed = "1"` and reveals every `[data-gated]` element on the page (see the gate script in `_layouts/default.html`). Anything else shows an inline error and keeps the form. A hidden `website` field is a honeypot. If it is filled, the form pretends to succeed and never posts.
+
+The endpoint is expected to handle double opt-in and add the contact to Resend.
+
+Analytics are Fathom. Button clicks fire `fathom.trackEvent(...)`.
+
+## Local development
+
+```bash
+bundle install
+LANG=C.UTF-8 LC_ALL=C.UTF-8 bundle exec jekyll serve
+```
+
+The locale matters. Without UTF-8 the Sass converter fails on the theme's stylesheet.
+
+If `bundle exec jekyll` says the command is not found, run it through the gem path:
+
+```bash
+LANG=C.UTF-8 LC_ALL=C.UTF-8 bundle exec ruby "$(bundle show jekyll)/exe/jekyll" serve
+```
+
+## Project structure
+
+```
+_config.yml              Site settings and the integration URLs above
+_layouts/default.html    Head, nav, footer, newsletter gate script
+_layouts/article.html    Article page. Handles the subscriber gate.
+_layouts/articles-index.html
+_includes/nav.html
+_includes/cta-diagnostic.html   Closing call-to-action band used on service pages
+_includes/newsletter-form.html  Signup form plus the reveal logic
+_includes/testimonials.html     Renders _data/testimonials.yml
+_includes/article-card.html
+_data/testimonials.yml
+_posts/                  Published articles
+_drafts/                 Unpublished articles
+index.html               Homepage
+pricing.html             /pricing/  Services comparison
+deep-dive.html           /deep-dive/  (redirects from /private-session/)
+advisory.html            /advisory/
+fractional-cto.html      /fractional-cto/
+about.html
+ai.html, build.html, craft.html   Unlinked landing pages used for outreach experiments
+```
+
+## Writing an article
+
+Add a file to `_posts/` named `YYYY-MM-DD-slug.md`:
+
+```yaml
+---
+title: "Title"
+description: "One sentence. Used for SEO and the article card."
+author: "Kyle Miller"
+members_only: false     # true shows a teaser and the newsletter form
+teaser: "Optional. Shown above the gate on subscriber articles."
+tags:
+  - architecture
+---
+```
 
 ## Deployment
 
-### GitHub Pages
-
-1. Push your code to a GitHub repository
-2. Go to Settings > Pages
-3. Select "Deploy from a branch"
-4. Choose the `main` branch and `/ (root)` folder
-5. Click "Save"
-
-The site will be available at `https://yourusername.github.io/repository-name`
-
-### Custom Domain
-
-To use a custom domain (like ctoconnect.io):
-
-1. Add your domain to the `CNAME` file in the root directory
-2. Configure your DNS settings to point to GitHub Pages
-3. Update the `url` in `_config.yml` to match your domain
-
-## Project Structure
-
-```
-ctoconnect-website/
-├── _config.yml          # Jekyll configuration
-├── _layouts/            # Layout templates
-│   └── default.html     # Main layout
-├── assets/              # Static assets
-│   └── images/          # Images
-│       └── cto-dots-logo.png
-├── index.html           # Homepage
-├── about.html           # About page
-├── 404.html             # Custom error page
-├── CNAME                # Custom domain configuration
-├── robots.txt           # SEO file
-├── Gemfile              # Ruby dependencies
-└── README.md            # This file
-```
-
-## Customization
-
-### Colors
-
-The site uses Bootstrap 5's default color scheme with custom CSS variables defined in the layout file. You can modify the colors by editing the `:root` variables in `_layouts/default.html`.
-
-### Content
-
-- **Homepage**: Edit `index.html` to modify the main content
-- **About Page**: Edit `about.html` for the about page content
-- **Site Configuration**: Update `_config.yml` for site-wide settings
-
-### Logo
-
-Replace `assets/images/cto-dots-logo.png` with your own logo. The site is configured to use this logo in the navigation and various sections.
-
-## SEO
-
-The site includes:
-
-- Meta descriptions for each page
-- Open Graph tags for social media sharing
-- Structured data markup
-- Semantic HTML structure
-- Fast loading times
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test locally
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Push to `main`. GitHub Pages builds and deploys. The custom domain is set in `CNAME`.
 
 ## Contact
 
-For questions about this website or CTO Connect services, contact:
-
-- Email: kyle@ctoconnect.io
-- Website: https://ctoconnect.io
-
----
-
-Built with ❤️ using Jekyll and Bootstrap 5
+kyle@ctoconnect.io

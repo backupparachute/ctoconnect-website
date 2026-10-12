@@ -1,5 +1,5 @@
 title: CTOConnect
-description: CTO-Level Guidance Without the Full-Time Commitment. Real problems. Real answers. No bullshit.
+description: CTO-level judgment when you need it. Real problems. Real answers. No bullshit.
 url: "https://ctoconnect.io"
 baseurl: ""
 
@@ -10,15 +10,21 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
-# Bunny.net Stream (video hosting)
-# bunny_library_id: "YOUR_LIBRARY_ID"  # Set this when episodes are added
+# Booking links (Calendly)
+# TODO Kyle: create the free 20-minute diagnostic call event and paste its URL here.
+diagnostic_call_url: "https://calendly.com/backupparachute/REPLACE-ME-diagnostic"
+# Paid 90-minute Deep Dive. Stripe payment is collected by Calendly at booking.
+deep_dive_url: "https://calendly.com/backupparachute/meet-with-kyle"
+
+# Newsletter signup endpoint.
+# TODO Kyle: point this at the endpoint that adds the contact to Resend.
+# Contract: POST JSON {"email": "...", "source": "<page path>"}; any 2xx response means subscribed.
+newsletter_endpoint: "https://REPLACE-ME.example.com/subscribe"
 
 # Collections
 collections:
-  episodes:
-    output: true
-    permalink: /episodes/:title/
   posts:
     output: true
     permalink: /articles/:title/
@@ -27,16 +33,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "episodes"
-    values:
-      layout: "episode"
-      members_only: true
-  - scope:
-      path: ""
       type: "posts"
     values:
       layout: "article"
-      members_only: false
   - scope:
       path: ""
       type: "pages"
@@ -61,5 +60,5 @@ social:
 author:
   name: Kyle Miller
   email: kyle@ctoconnect.io
-  bio: "27 years building production systems. Built and sold a SaaS. Teaching sustainable development practices to technical founders."
+  bio: "27 years building production systems. Built and sold a SaaS. Still runs them."
   location: "United States"

@@ -11,48 +11,51 @@ permalink: /terms/
 <div class="col-lg-8 mx-auto" markdown="1">
 
 <h1 class="display-5 fw-bold mb-4">Terms of Service</h1>
-<p class="text-muted mb-4">Last updated: April 4, 2026</p>
+<p class="text-muted mb-4">Last updated: October 12, 2026</p>
 
 ## Overview
 
-CTOConnect provides CTO-level technical guidance through monthly office hours sessions, recorded episodes, and written articles. By creating an account or using our services, you agree to these terms.
+CTOConnect provides CTO-level technical guidance through paid advisory services and free written content. By booking a service, subscribing to the newsletter or using this website, you agree to these terms.
 
-## Membership
+## Services
 
-- **Pricing:** CTOConnect membership is $99 per month after a 30-day free trial.
-- **Billing:** Your subscription is billed monthly through our billing provider, Outseta. You authorize recurring charges to your chosen payment method.
-- **Cancellation:** You may cancel your membership at any time through your account settings. Cancellation takes effect at the end of your current billing period. No refunds are provided for partial months.
-- **Free trial:** Your 30-day free trial begins when you create your account. You will not be charged until the trial period ends. You may cancel at any time during the trial without being charged.
+- **CTO Deep Dive:** A one-time 90-minute session at the price shown on the website. Payment is collected when you book. Reschedule with at least 24 hours notice. Sessions cancelled with less notice, or missed, are not refunded.
+- **CTO Advisory:** A monthly engagement of one 90-minute session per week, billed monthly in advance. Either side may end it at the end of any paid month. No refunds for partial months. Advisory does not include work, deliverables or availability between sessions.
+- **Fractional CTO:** A monthly engagement scoped and priced in writing before it starts. The written scope governs. Fractional CTO does not include software development.
+- **Diagnostic call:** The free 20-minute call is a conversation to decide whether and how we might work together. It is not a consulting session and carries no obligation on either side.
+
+## Billing
+
+Payments are processed by Stripe, either through our booking provider at the time of booking or by invoice or payment link. You authorize the charges for the service you selected.
+
+## Newsletter
+
+Subscribing to the newsletter gives you access to subscriber-only articles on this site and occasional email from us. You can unsubscribe at any time using the link in any email.
 
 ## Content and Intellectual Property
 
-- All content on CTOConnect (articles, episodes, session recordings) is owned by CTOConnect and protected by copyright.
-- Your membership grants you a personal, non-transferable license to access and view the content for your own use.
-- You may not redistribute, share login credentials, record sessions, or republish content without written permission.
+- All content on CTOConnect, including articles and anything produced during an engagement unless agreed otherwise in writing, is owned by CTOConnect and protected by copyright.
+- You may read and use the content for your own business. You may not republish it, resell it or record sessions without written permission.
 
 ## Advisory Disclaimer
 
-CTOConnect provides general technical guidance and educational content. It is not a substitute for professional consulting, legal, or financial advice tailored to your specific situation. Decisions you make based on our content are your responsibility.
+Guidance from CTOConnect is based on experience and the information you provide. It is not legal, financial or accounting advice. Decisions you make based on our guidance are your responsibility.
 
-## Acceptable Use
+## Confidentiality
 
-You agree not to:
-
-- Share your account credentials with others
-- Attempt to access content or systems you are not authorized to use
-- Use our content for purposes that compete directly with CTOConnect
+Information you share during an engagement is kept confidential and used only to provide the service. Anonymized lessons may inform future articles. Nothing identifying you or your company is published without your permission.
 
 ## Limitation of Liability
 
-CTOConnect is provided "as is." We make no guarantees about specific outcomes from following our guidance. Our total liability is limited to the amount you have paid for your membership in the prior 12 months.
+Services are provided "as is." We make no guarantees about specific outcomes. Our total liability is limited to the amount you have paid us in the prior 12 months.
 
 ## Changes to These Terms
 
-We may update these terms from time to time. We will notify members of material changes via email. Continued use of the service after changes constitutes acceptance.
+We may update these terms from time to time. Continued use of the website or services after changes constitutes acceptance.
 
 ## Contact
 
-Questions about these terms? Use the contact form on our website.
+Questions about these terms? Email kyle@ctoconnect.io.
 
 </div>
 </div>

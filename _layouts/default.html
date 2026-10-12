@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/icon.png">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 
@@ -78,27 +79,29 @@
     <script src="https://cdn.usefathom.com/script.js" data-site="VHUVYNME" defer></script>
     <!-- / Fathom -->
 
-    <!-- Outseta -->
+    <!-- Newsletter gate: subscribers see [data-gated] content, everyone else sees [data-gate-wall] -->
     <script>
-        var o_options = {
-            domain: 'cto-connect.outseta.com',
-            load: 'auth,customForm,emailList,leadCapture,nocode,profile,support',
-            nocode: {
-                hideBody: true,
-                clearQuerystring: true
+        window.ctocGate = (function () {
+            var KEY = 'ctoc_subscribed';
+            function subscribed() {
+                try { return localStorage.getItem(KEY) === '1'; } catch (e) { return false; }
             }
-        };
-    </script>
-    <script src="https://cdn.outseta.com/outseta.min.js"
-            data-options="o_options">
-    </script>
-
-    <!-- Enhanced content protection -->
-    <noscript>
-        <meta http-equiv="refresh" content="0; url=https://ctoconnect.io" />
-    </noscript>
-    <script>
-        (!!window.Outseta) || (window.location.href = window.location.origin);
+            function reveal(hideWalls) {
+                document.querySelectorAll('[data-gated]').forEach(function (el) { el.style.display = ''; });
+                if (hideWalls) {
+                    document.querySelectorAll('[data-gate-wall]').forEach(function (el) { el.style.display = 'none'; });
+                }
+            }
+            // Called after a fresh signup. Keeps the wall so its "you're in" message stays visible.
+            function markSubscribed() {
+                try { localStorage.setItem(KEY, '1'); } catch (e) {}
+                reveal(false);
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                if (subscribed()) reveal(true);
+            });
+            return { subscribed: subscribed, markSubscribed: markSubscribed };
+        })();
     </script>
 </head>
 <body>
@@ -134,13 +137,13 @@
                               stroke-linecap="round"/>
                     </svg>
                     {% unless page.hide_tagline %}
-                    <p class="text-muted">CTO-level guidance without the full-time commitment.</p>
+                    <p class="text-muted">CTO-level judgment when you need it.</p>
                     {% endunless %}
                 </div>
                 <div class="col-lg-6 mb-4 text-lg-end">
                     <p class="mb-2">
                         <i class="fas fa-envelope me-2"></i>
-                        <a href="#" data-o-lead-capture="1" data-mode="popup" data-form-uid="amRZl7mJ" class="text-decoration-none text-dark" onclick="fathom.trackEvent('Clicked Contact')">Contact</a>
+                        <a href="mailto:{{ site.author.email }}" class="text-decoration-none text-dark" onclick="fathom.trackEvent('Clicked Contact')">{{ site.author.email }}</a>
                     </p>
                 </div>
             </div>
