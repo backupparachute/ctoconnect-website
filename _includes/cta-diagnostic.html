@@ -14,8 +14,7 @@ Optional params:
             <div class="col-lg-8 mx-auto text-center">
                 <h2 class="display-3 fw-bold mb-4 handwritten">{{ heading }}</h2>
                 <p class="lead mb-4">{{ body }}</p>
-                <a href="{{ site.diagnostic_call_url }}" class="btn btn-teal btn-lg rounded-pill px-5 mb-3" onclick="fathom.trackEvent('{{ event }}')">Book a free diagnostic call</a>
-                <p class="mb-0" style="opacity: 0.8;">A diagnosis. Not a free consulting session.</p>
+                <a href="{{ site.diagnostic_call_url }}" class="btn btn-teal btn-lg rounded-pill px-5" onclick="fathom.trackEvent('{{ event }}')">Book a free diagnostic call</a>
             </div>
         </div>
     </div>
