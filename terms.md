@@ -15,11 +15,11 @@ permalink: /terms/
 
 ## Overview
 
-CTOConnect provides CTO-level technical guidance through paid advisory services and free written content. By booking a service, subscribing to the newsletter or using this website, you agree to these terms.
+CTOConnect provides technical guidance at the CTO level through paid advisory services and free written content. By booking a service, subscribing to the newsletter or using this website, you agree to these terms.
 
 ## Services
 
-- **CTO Deep Dive:** A one-time 90-minute session at the price shown on the website. Payment is collected when you book. Reschedule with at least 24 hours notice. Sessions cancelled with less notice, or missed, are not refunded.
+- **CTO Deep Dive:** A single 90-minute session at the price shown on the website. Payment is collected when you book. Reschedule with at least 24 hours notice. Sessions cancelled with less notice, or missed, are not refunded.
 - **CTO Advisory:** A monthly engagement of one 90-minute session per week, billed monthly in advance. Either side may end it at the end of any paid month. No refunds for partial months. Advisory does not include work, deliverables or availability between sessions.
 - **Fractional CTO:** A monthly engagement scoped and priced in writing before it starts. The written scope governs. Fractional CTO does not include software development.
 - **Diagnostic call:** The free 20-minute call is a conversation to decide whether and how we might work together. It is not a consulting session and carries no obligation on either side.
@@ -30,7 +30,7 @@ Payments are processed by Stripe, either through our booking provider at the tim
 
 ## Newsletter
 
-Subscribing to the newsletter gives you access to subscriber-only articles on this site and occasional email from us. You can unsubscribe at any time using the link in any email.
+Subscribing to the newsletter gives you access to articles reserved for subscribers on this site and occasional email from us. You can unsubscribe at any time using the link in any email.
 
 ## Content and Intellectual Property
 
