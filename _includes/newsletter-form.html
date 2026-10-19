@@ -1,7 +1,7 @@
 {%- comment -%}
 Newsletter signup. Posts to site.newsletter_endpoint and unlocks [data-gated] content on success.
 Optional param:
-  context - "article" (default) for the gated-article wall, "general" for the end of public pages
+  context - "article" (default) for the wall on a gated article, "general" for the end of public pages
 {%- endcomment -%}
 {%- assign context = include.context | default: "article" -%}
 <div class="card shadow rounded-3 border-0 bg-purple text-white ctoc-newsletter">
