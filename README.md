@@ -10,7 +10,7 @@ Three services, in order of how involved Kyle is:
 |---|---|---|
 | CTO Deep Dive | $600 one-time | One 90-minute working session on one problem. Booked and paid directly through Calendly. |
 | CTO Advisory | $1,800/month | One 90-minute session every week. Nothing between sessions. Starts with a diagnostic call. |
-| Fractional CTO | from $4,000/month | Kyle involved in the company and delivering CTO-level work. Scoped on a diagnostic call. |
+| Fractional CTO | from $4,000/month | Kyle involved in the company and delivering the work a CTO delivers. Scoped on a diagnostic call. |
 
 Every page funnels to the **free 20-minute diagnostic call**. It is a fit conversation, not a free consulting session.
 
