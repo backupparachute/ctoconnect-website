@@ -22,7 +22,7 @@ Everything external lives in `_config.yml`:
 
 | Key | Used for |
 |---|---|
-| `diagnostic_call_url` | Calendly event for the free 20 minute call. **TODO: replace the placeholder.** |
+| `diagnostic_call_url` | Calendly event for the free 20 minute call. |
 | `deep_dive_url` | Calendly event for the paid Deep Dive. Stripe payment is collected at booking. |
 | `newsletter_endpoint` | Where the newsletter form posts. **TODO: replace the placeholder.** |
 

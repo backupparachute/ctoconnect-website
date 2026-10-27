@@ -13,8 +13,8 @@ plugins:
   - jekyll-redirect-from
 
 # Booking links (Calendly)
-# TODO Kyle: create the free 20 minute diagnostic call event and paste its URL here.
-diagnostic_call_url: "https://calendly.com/backupparachute/REPLACE-ME-diagnostic"
+# Free 20 minute diagnostic call.
+diagnostic_call_url: "https://calendly.com/backupparachute/cto-connect-diagnosis"
 # Paid 90 minute Deep Dive. Stripe payment is collected by Calendly at booking.
 deep_dive_url: "https://calendly.com/backupparachute/meet-with-kyle"
 
