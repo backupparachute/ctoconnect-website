@@ -28,17 +28,17 @@ permalink: /privacy/
 
 We do not sell your personal information.
 
-## Third-Party Services
+## Other Services We Use
 
 - **[Calendly](https://calendly.com/):** Scheduling for calls and sessions. See [Calendly's Privacy Notice](https://calendly.com/privacy).
 - **[Stripe](https://stripe.com/):** Payment processing. See [Stripe's Privacy Policy](https://stripe.com/privacy).
 - **[Resend](https://resend.com/):** Sends the newsletter and stores subscriber email addresses. See [Resend's Privacy Policy](https://resend.com/legal/privacy-policy).
-- **[Fathom Analytics](https://usefathom.com/):** Privacy-focused, cookieless website analytics. See [Fathom's Privacy Policy](https://usefathom.com/privacy).
+- **[Fathom Analytics](https://usefathom.com/):** Cookieless website analytics that collect no personal data. See [Fathom's Privacy Policy](https://usefathom.com/privacy).
 - **[GitHub Pages](https://pages.github.com/):** Hosts the website. See [GitHub's Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 ## Cookies and Local Storage
 
-CTOConnect does not set tracking cookies. When you subscribe to the newsletter, the site stores a single flag in your browser so subscriber-only articles stay open on that device. Clearing your browser storage removes it.
+CTOConnect does not set tracking cookies. When you subscribe to the newsletter, the site stores a single flag in your browser so articles reserved for subscribers stay open on that device. Clearing your browser storage removes it.
 
 ## Data Retention
 
@@ -50,7 +50,7 @@ You can ask us to show you, correct or delete the personal data we hold about yo
 
 ## Contact
 
-For privacy-related questions or requests, email kyle@ctoconnect.io.
+For privacy questions or requests, email kyle@ctoconnect.io.
 
 </div>
 </div>

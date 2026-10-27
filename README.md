@@ -8,11 +8,11 @@ Three services, in order of how involved Kyle is:
 
 | Service | Price | What it is |
 |---|---|---|
-| CTO Deep Dive | $600 one-time | One 90-minute working session on one problem. Booked and paid directly through Calendly. |
-| CTO Advisory | $1,800/month | One 90-minute session every week. Nothing between sessions. Starts with a diagnostic call. |
-| Fractional CTO | from $4,000/month | Kyle involved in the company and delivering CTO-level work. Scoped on a diagnostic call. |
+| CTO Deep Dive | $600 one-time | One 90 minute working session on one problem. Booked and paid directly through Calendly. |
+| CTO Advisory | $1,800/month | One 90 minute session every week. Nothing between sessions. Starts with a diagnostic call. |
+| Fractional CTO | from $4,000/month | Kyle involved in the company and delivering the work a CTO delivers. Scoped on a diagnostic call. |
 
-Every page funnels to the **free 20-minute diagnostic call**. It is a fit conversation, not a free consulting session.
+Every page funnels to the **free 20 minute diagnostic call**. It is a fit conversation, not a free consulting session.
 
 There is no membership, no login and no paid content tier. Some articles are marked `members_only: true` in their front matter. Those show a teaser and a newsletter form. Subscribing opens the article in that browser.
 
@@ -22,7 +22,7 @@ Everything external lives in `_config.yml`:
 
 | Key | Used for |
 |---|---|
-| `diagnostic_call_url` | Calendly event for the free 20-minute call. **TODO: replace the placeholder.** |
+| `diagnostic_call_url` | Calendly event for the free 20 minute call. |
 | `deep_dive_url` | Calendly event for the paid Deep Dive. Stripe payment is collected at booking. |
 | `newsletter_endpoint` | Where the newsletter form posts. **TODO: replace the placeholder.** |
 
