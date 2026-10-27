@@ -24,6 +24,7 @@ Everything external lives in `_config.yml`:
 |---|---|
 | `diagnostic_call_url` | Calendly event for the free 20 minute call. |
 | `deep_dive_url` | Calendly event for the paid Deep Dive. Stripe payment is collected at booking. |
+| `contact_form_url` | Secure Transmit workflow `cto-connect-contact`. The contact form at `/contact/` posts JSON `{firstname, lastname, email, message, source}` to it. |
 | `newsletter_endpoint` | Where the newsletter form posts. **TODO: replace the placeholder.** |
 
 ### Newsletter endpoint contract
@@ -74,6 +75,7 @@ _data/testimonials.yml
 _posts/                  Published articles
 _drafts/                 Unpublished articles
 index.html               Homepage
+contact.html             /contact/  Contact form (Secure Transmit)
 pricing.html             /pricing/  Services comparison
 deep-dive.html           /deep-dive/  (redirects from /private-session/)
 advisory.html            /advisory/
