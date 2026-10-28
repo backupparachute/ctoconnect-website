@@ -866,15 +866,20 @@
 
 /* Theme teal, matching .btn-teal on the pricing page */
 .btn-pill.is-teal {
-    min-height: 48px;
-    font-size: 16px;
     background: var(--teal);
     border-color: var(--teal);
+    font-weight: 600;
 }
 
 .btn-pill.is-teal:hover {
     background: #0d9488;
     border-color: #0d9488;
+}
+
+.tier-card .btn-pill.is-teal {
+    min-height: 48px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* Home: articles */
