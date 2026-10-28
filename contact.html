@@ -50,7 +50,7 @@ permalink: /contact/
                                 </div>
                             </div>
                         </form>
-                        <p class="mt-4 mb-0 fw-bold text-teal contact-msg contact-msg-success" style="display:none;">Thanks. I'll be in touch soon.</p>
+                        <p class="mt-4 mb-0 fw-bold text-teal contact-msg contact-msg-success" style="display:none;">Thanks. I'll be in touch soon. <span class="contact-msg-subscribed" style="display:none;">You're subscribed, and the <a href="{{ site.baseurl }}/articles/" class="text-teal">subscriber articles</a> are open for you now.</span></p>
                         <p class="mt-4 mb-0 text-danger contact-msg contact-msg-error" style="display:none;">That didn't go through. Give it a minute and try again.</p>
                     </div>
                 </div>
@@ -63,6 +63,7 @@ permalink: /contact/
 (function () {
     var form = document.getElementById('contactForm');
     var success = document.querySelector('.contact-msg-success');
+    var subscribedNote = document.querySelector('.contact-msg-subscribed');
     var error = document.querySelector('.contact-msg-error');
     var button = form.querySelector('button[type=submit]');
 
@@ -102,6 +103,7 @@ permalink: /contact/
             if (!res.ok) throw new Error('HTTP ' + res.status);
             if (window.fathom) fathom.trackEvent('Contact: Form submit');
             if (data.newsletter && window.ctocGate) window.ctocGate.markSubscribed();
+            subscribedNote.style.display = data.newsletter ? '' : 'none';
             form.reset();
             success.style.display = '';
         }).catch(function () {
