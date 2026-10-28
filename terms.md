@@ -55,7 +55,7 @@ We may update these terms from time to time. Continued use of the website or ser
 
 ## Contact
 
-Questions about these terms? Email kyle@ctoconnect.io.
+Questions about these terms? Email {{ site.legal_email }}.
 
 </div>
 </div>

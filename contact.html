@@ -35,6 +35,12 @@ permalink: /contact/
                                     <label for="message" class="form-label">What's going on?</label>
                                     <textarea class="form-control form-control-lg" id="message" name="message" rows="6" required></textarea>
                                 </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" checked>
+                                        <label class="form-check-label" for="newsletter">Send me the articles I don't publish publicly. Now and then, no daily drip.</label>
+                                    </div>
+                                </div>
                                 <!-- Honeypot. Bots fill it, people never see it. -->
                                 <div style="position:absolute; left:-10000px;" aria-hidden="true">
                                     <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
@@ -81,8 +87,9 @@ permalink: /contact/
 
         var data = {};
         new FormData(form).forEach(function (value, key) {
-            if (key !== 'website') data[key] = value;
+            if (key !== 'website' && key !== 'newsletter') data[key] = value;
         });
+        data.newsletter = form.newsletter.checked;
         data.source = window.location.pathname;
 
         button.disabled = true;
@@ -93,6 +100,7 @@ permalink: /contact/
         }).then(function (res) {
             if (!res.ok) throw new Error('HTTP ' + res.status);
             if (window.fathom) fathom.trackEvent('Contact: Form submit');
+            if (data.newsletter && window.ctocGate) window.ctocGate.markSubscribed();
             form.reset();
             success.style.display = '';
         }).catch(function () {

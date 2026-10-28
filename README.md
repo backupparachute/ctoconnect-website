@@ -24,8 +24,9 @@ Everything external lives in `_config.yml`:
 |---|---|
 | `diagnostic_call_url` | Calendly event for the free 20 minute call. |
 | `deep_dive_url` | Calendly event for the paid Deep Dive. Stripe payment is collected at booking. |
-| `contact_form_url` | Secure Transmit workflow `cto-connect-contact`. The contact form at `/contact/` posts JSON `{firstname, lastname, email, message, source}` to it. |
+| `contact_form_url` | Secure Transmit workflow `cto-connect-contact`. The contact form at `/contact/` posts JSON `{firstname, lastname, email, message, newsletter, source}` to it. `newsletter` is a boolean from the checkbox on the form (checked by default). |
 | `newsletter_endpoint` | Where the newsletter form posts. **TODO: replace the placeholder.** |
+| `legal_email` | Address shown on the terms and privacy pages. |
 
 ### Newsletter endpoint contract
 
@@ -106,4 +107,4 @@ Push to `main`. GitHub Pages builds and deploys. The custom domain is set in `CN
 
 ## Contact
 
-kyle@ctoconnect.io
+Through the form at [ctoconnect.io/contact](https://ctoconnect.io/contact/).

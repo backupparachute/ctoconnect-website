@@ -50,7 +50,7 @@ You can ask us to show you, correct or delete the personal data we hold about yo
 
 ## Contact
 
-For privacy questions or requests, email kyle@ctoconnect.io.
+For privacy questions or requests, email {{ site.legal_email }}.
 
 </div>
 </div>
