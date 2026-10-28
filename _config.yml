@@ -59,6 +59,9 @@ exclude:
 social:
   name: CTO Connect
 
+# Address shown on the terms and privacy pages.
+legal_email: legal@ctoconnect.io
+
 # Author information
 author:
   name: Kyle Miller
