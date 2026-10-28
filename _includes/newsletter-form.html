@@ -77,7 +77,7 @@ Optional param:
         fetch('{{ site.newsletter_endpoint }}', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: email, source: window.location.pathname })
+            body: JSON.stringify({ form: 'newsletter', email: email, newsletter: true, source: window.location.pathname })
         }).then(function (res) {
             if (!res.ok) throw new Error('HTTP ' + res.status);
             if (window.fathom) fathom.trackEvent('Subscribed Newsletter');

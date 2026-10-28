@@ -18,13 +18,12 @@ diagnostic_call_url: "https://calendly.com/backupparachute/cto-connect-diagnosis
 # Paid 90 minute Deep Dive. Stripe payment is collected by Calendly at booking.
 deep_dive_url: "https://calendly.com/backupparachute/meet-with-kyle"
 
-# Contact form. Secure Transmit workflow "cto-connect-contact". Posts JSON {firstname, lastname, email, message, source}.
+# Secure Transmit workflow "cto-connect-contact". Both forms post JSON to it and any 2xx means success.
+# Contact form:    {form: "contact", firstname, lastname, email, message, newsletter: true|false, source}
+# Newsletter form: {form: "newsletter", email, newsletter: true, source}
+# The workflow tells them apart by "form" and adds the contact to Resend when newsletter is true.
 contact_form_url: "https://bps.securetransmit.io/forms/cto-connect-contact?token=BUZfocfq5S3sNobzQQJsiUja"
-
-# Newsletter signup endpoint.
-# TODO Kyle: point this at the endpoint that adds the contact to Resend.
-# Contract: POST JSON {"email": "...", "source": "<page path>"}; any 2xx response means subscribed.
-newsletter_endpoint: "https://REPLACE-ME.example.com/subscribe"
+newsletter_endpoint: "https://bps.securetransmit.io/forms/cto-connect-contact?token=BUZfocfq5S3sNobzQQJsiUja"
 
 # Collections
 collections:

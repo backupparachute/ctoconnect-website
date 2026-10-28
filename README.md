@@ -24,24 +24,33 @@ Everything external lives in `_config.yml`:
 |---|---|
 | `diagnostic_call_url` | Calendly event for the free 20 minute call. |
 | `deep_dive_url` | Calendly event for the paid Deep Dive. Stripe payment is collected at booking. |
-| `contact_form_url` | Secure Transmit workflow `cto-connect-contact`. The contact form at `/contact/` posts JSON `{firstname, lastname, email, message, newsletter, source}` to it. `newsletter` is a boolean from the checkbox on the form (checked by default). |
-| `newsletter_endpoint` | Where the newsletter form posts. **TODO: replace the placeholder.** |
+| `contact_form_url` | Secure Transmit workflow `cto-connect-contact`. The contact form at `/contact/` posts to it. |
+| `newsletter_endpoint` | Where the newsletter form posts. Currently the same Secure Transmit workflow. |
 | `legal_email` | Address shown on the terms and privacy pages. |
 
-### Newsletter endpoint contract
+### Form contracts
 
-`_includes/newsletter-form.html` sends:
+Both forms post JSON and treat any 2xx as success. The `form` field says which one sent it.
+
+Contact form (`contact.html`):
+
+```
+POST <contact_form_url>
+{"form": "contact", "firstname": "...", "lastname": "...", "email": "...", "message": "...", "newsletter": true, "source": "/contact/"}
+```
+
+`newsletter` comes from the checkbox on the form, checked by default.
+
+Newsletter form (`_includes/newsletter-form.html`):
 
 ```
 POST <newsletter_endpoint>
-Content-Type: application/json
-
-{"email": "you@company.com", "source": "/articles/some-slug/"}
+{"form": "newsletter", "email": "you@company.com", "newsletter": true, "source": "/articles/some-slug/"}
 ```
 
-Any 2xx response counts as subscribed. The form then sets `localStorage.ctoc_subscribed = "1"` and reveals every `[data-gated]` element on the page (see the gate script in `_layouts/default.html`). Anything else shows an inline error and keeps the form. A hidden `website` field is a honeypot. If it is filled, the form pretends to succeed and never posts.
+On success the newsletter form sets `localStorage.ctoc_subscribed = "1"` and reveals every `[data-gated]` element on the page (see the gate script in `_layouts/default.html`). Anything else shows an inline error and keeps the form. A hidden `website` field is a honeypot. If it is filled, the form pretends to succeed and never posts.
 
-The endpoint is expected to handle double opt-in and add the contact to Resend.
+The Secure Transmit workflow is expected to add the contact to Resend when `newsletter` is true, and to handle any opt-in confirmation.
 
 Analytics are Fathom. Button clicks fire `fathom.trackEvent(...)`.
 

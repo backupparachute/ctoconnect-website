@@ -38,7 +38,7 @@ permalink: /contact/
                                 <div class="col-12">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" checked>
-                                        <label class="form-check-label" for="newsletter">Send me the articles I don't publish publicly. Now and then, no daily drip.</label>
+                                        <label class="form-check-label" for="newsletter">Subscribe to the newsletter. <span class="text-muted">Infrequent. No daily drip.</span></label>
                                     </div>
                                 </div>
                                 <!-- Honeypot. Bots fill it, people never see it. -->
@@ -89,6 +89,7 @@ permalink: /contact/
         new FormData(form).forEach(function (value, key) {
             if (key !== 'website' && key !== 'newsletter') data[key] = value;
         });
+        data.form = 'contact';
         data.newsletter = form.newsletter.checked;
         data.source = window.location.pathname;
 
