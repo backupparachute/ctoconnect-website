@@ -1,0 +1,23 @@
+{%- assign greg = site.data.testimonials | where: "name", "Greg Toumayan" | first -%}
+<section class="section-band">
+    <div class="section-inner split split-top">
+        <div class="stack">
+            <h2>The quick version</h2>
+            <ul class="check-list quick-list">
+                <li>{% include mark-check.html %}<span>Founder with one exit. SaaS operator who understands both product and sales. Currently run <a href="https://backupparachute.com">Backup Parachute Software</a>.</span></li>
+                <li>{% include mark-check.html %}<span>27+ years delivering software for Fortune 500s, hedge funds, government agencies, and fast moving startups.</span></li>
+                <li>{% include mark-check.html %}<span>Fractional CTO trusted by growing companies to steer technical decisions that actually move revenue.</span></li>
+                <li>{% include mark-check.html %}<span>I help dev teams ship what customers actually need, not just what they asked for.</span></li>
+            </ul>
+        </div>
+        <div class="stack">
+            <p class="lead-text">The number of years matters less than what I have watched go wrong in them. The frameworks change every few years. The mistakes don't. The rewrite that never ships, the senior hire who isn't, the architecture built for customers you don't have yet.</p>
+            {%- if greg %}
+            <figure class="quote-card is-white">
+                <blockquote>&ldquo;{{ greg.quote }}&rdquo;</blockquote>
+                <figcaption>{% if greg.link %}<a href="{{ greg.link }}" target="_blank" rel="noopener"><strong>{{ greg.name }}</strong></a>{% else %}<strong>{{ greg.name }}</strong>{% endif %}, {{ greg.title }}</figcaption>
+            </figure>
+            {%- endif %}
+        </div>
+    </div>
+</section>

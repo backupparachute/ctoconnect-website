@@ -1,62 +1,11 @@
 ---
 layout: default
 title: About Kyle
-description: 27 years building software at every scale, and fixing it when it broke. I know what works and what blows up.
+description: 27 years of making the hard calls. I've built software at every scale and helped teams make the decisions that are expensive to get wrong.
 ---
 
-<section class="py-5 my-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h1 class="display-3 fw-bold mb-5 handwritten text-center">27 Years of Fixing Things That Blew Up</h1>
-
-                <p class="lead mb-5 text-center">I've spent my career building software at every scale, and a good part of it getting called in after a decision went wrong.</p>
-
-                <div class="card shadow-sm rounded-3 mb-4 border-0">
-                    <div class="card-body p-4">
-                        <h3 class="handwritten fs-2 text-purple mb-4">Where I've Worked</h3>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-3"><strong>Fortune 500s:</strong> Where process matters and scale kills you. I've seen enterprise teams move so slow they got eaten by competitors.</li>
-                            <li class="mb-3"><strong>Startups:</strong> Where speed beats perfection and tech debt is a feature. I've seen companies scale their architecture before finding customers.</li>
-                            <li class="mb-3"><strong>Military:</strong> Where security isn't optional and downtime costs lives.</li>
-                            <li class="mb-3"><strong>Hedge funds:</strong> Where correctness under pressure is everything.</li>
-                            <li class="mb-0"><strong>SaaS:</strong> Where uptime is revenue and outages are existential. I built and sold a SaaS. Still run production systems.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-3 mb-5 border-0 bg-purple text-white">
-                    <div class="card-body p-5 text-center">
-                        <p class="fs-5 fw-bold mb-0">I've rescued teams from every expensive mistake. So I can help you avoid them.</p>
-                    </div>
-                </div>
-
-                <h2 class="display-5 fw-bold mb-4 handwritten text-teal text-center">What I've Seen Fail</h2>
-
-                <p class="mb-3">$50M rewrites that never shipped.</p>
-                <p class="mb-3">Teams paralyzed by "senior" hires who made everything worse.</p>
-                <p class="mb-3">Startups that scaled their architecture before finding customers.</p>
-                <p class="mb-3">Enterprises that moved so slow they got eaten by competitors.</p>
-                <p class="mb-5">Solo founders who built fast with AI but had no idea what was about to break.</p>
-
-                <hr class="my-5 mx-auto" style="width: 60%; opacity: 0.2;">
-
-                <h2 class="display-5 fw-bold mb-4 handwritten text-purple text-center">The Quick Version</h2>
-
-                <p class="mb-3">Founder with one exit. SaaS operator who understands both product and sales. Currently run <a href="https://backupparachute.com" class="text-purple fw-bold">Backup Parachute Software</a>.</p>
-                <p class="mb-3">27+ years delivering software for Fortune 500s, hedge funds, government agencies, and fast moving startups.</p>
-                <p class="mb-3">Fractional CTO trusted by growing companies to steer technical decisions that actually move revenue.</p>
-                <p class="mb-5">I help dev teams ship what customers actually need, not just what they asked for.</p>
-
-                <p class="mb-4">The number of years matters less than what I have watched go wrong in them. The frameworks change every few years. The mistakes don't. The rewrite that never ships, the senior hire who isn't, the architecture built for customers you don't have yet. I have watched each of those play out enough times to spot them early, when they are still cheap to fix.</p>
-
-                <p class="lead fw-bold mb-5">I don't have all the answers. But I've probably seen your situation before.</p>
-
-                <div class="text-center">
-                    <a href="{{ site.diagnostic_call_url }}" class="btn btn-purple btn-lg rounded-pill px-5" onclick="fathom.trackEvent('Clicked Book Diagnostic About')">Book a free diagnostic call</a>
-                    <p class="mt-4 mb-0 text-muted small">More about Kyle at <a href="https://kylemiller.com" class="text-purple">kylemiller.com</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{% include about/hero.html %}
+{% include about/worked.html %}
+{% include about/failed.html %}
+{% include about/quick.html %}
+{% include about/cta.html %}

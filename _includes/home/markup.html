@@ -1,0 +1,42 @@
+<section class="section-band" id="markup">
+    <div class="section-inner split">
+        <div class="stack">
+            <h2>Bring the diagram. I'll mark it up.</h2>
+            <p class="lead-text">Your situation is specific. Team size, runway and stage change the right answer. A repo, a diagram, or just the problem is enough to start.</p>
+            <p class="eyebrow mt-2">What I help with</p>
+            <ul class="check-list help-list">
+                <li>{% include mark-check.html %}<span>Whether to rewrite</span></li>
+                <li>{% include mark-check.html %}<span>Whether your devs are the problem</span></li>
+                <li>{% include mark-check.html %}<span>Evaluating senior hires</span></li>
+                <li>{% include mark-check.html %}<span>Breaking features down so they ship</span></li>
+                <li>{% include mark-check.html %}<span>Quick fix vs. ideal fix vs. the right fix</span></li>
+                <li>{% include mark-check.html %}<span>Where AI writes code and where humans own it</span></li>
+            </ul>
+        </div>
+        <div>
+            <div class="diagram" role="img" aria-label="An architecture diagram: a web app and an API gateway in front of seven services, all connected to one Postgres database. Handwritten notes ask, 7 services, 3 devs? and point out that they all share one database, which makes it a monolith with extra steps.">
+                <svg class="diagram-lines" viewBox="0 0 540 420" aria-hidden="true" focusable="false">
+                    <g>
+                        <path d="M270,48 L270,84"/>
+                        <path d="M270,124 L57,176 M270,124 L192,176 M270,124 L327,176 M270,124 L462,176 M270,124 L125,230 M270,124 L260,230 M270,124 L395,230"/>
+                        <path d="M57,216 L230,340 M192,216 L250,340 M327,216 L290,340 M462,216 L310,340 M125,270 L240,340 M260,270 L270,340 M395,270 L300,340"/>
+                    </g>
+                </svg>
+                <div class="node node-main node-web" aria-hidden="true">Web app</div>
+                <div class="node node-main node-api" aria-hidden="true">API gateway</div>
+                <div class="node node-r1 node-c1" aria-hidden="true">users-svc</div>
+                <div class="node node-r1 node-c2" aria-hidden="true">auth-svc</div>
+                <div class="node node-r1 node-c3" aria-hidden="true">billing-svc</div>
+                <div class="node node-r1 node-c4" aria-hidden="true">email-svc</div>
+                <div class="node node-r2 node-c5" aria-hidden="true">search-svc</div>
+                <div class="node node-r2 node-c6" aria-hidden="true">notify-svc</div>
+                <div class="node node-r2 node-c7" aria-hidden="true">reports-svc</div>
+                <div class="node node-main node-db" aria-hidden="true">Postgres (one database)</div>
+                <div class="diagram-circle" aria-hidden="true"></div>
+                <p class="note diagram-note-top" aria-hidden="true">7 services. 3 devs?</p>
+                <svg class="diagram-arrow" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M8,4 C14,14 18,24 20,34 M20,34 L12,28 M20,34 L26,26" stroke="#6b21a8" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+                <p class="note diagram-note-bottom" aria-hidden="true">They all share one database. That's a monolith with extra steps.</p>
+            </div>
+        </div>
+    </div>
+</section>

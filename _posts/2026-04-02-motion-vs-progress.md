@@ -2,6 +2,7 @@
 title: "Motion vs. Progress"
 description: "Your team looks busy. But busy and productive aren't the same thing."
 author: "Kyle Miller"
+featured: true
 members_only: false
 teaser: "Jira boards full of movement. Standups full of updates. But nothing meaningful has shipped in weeks. Motion isn't progress."
 tags:

@@ -2,6 +2,7 @@
 title: "Monoliths Are Fine"
 description: "Microservices solve scaling problems most teams don't have yet. A well-structured monolith will take you further than you think."
 author: "Kyle Miller"
+featured: true
 members_only: true
 teaser: "Microservices are a scaling solution, not a starting point. Most teams adopt them way too early and pay the price for years."
 tags:

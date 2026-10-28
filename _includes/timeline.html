@@ -1,0 +1,14 @@
+{%- comment -%}
+Career timeline from _data/timeline.yml. Used on the homepage and the About page.
+Optional param:
+  about - true to use each stop's about_text when it has one
+{%- endcomment -%}
+<ol class="timeline">
+{%- for stop in site.data.timeline %}
+    <li>
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <p class="timeline-year">{{ stop.year }}</p>
+        <p class="timeline-text">{% if include.about and stop.about_text %}{{ stop.about_text }}{% else %}{{ stop.text }}{% endif %}</p>
+    </li>
+{%- endfor %}
+</ol>

@@ -1,0 +1,26 @@
+<section class="section" id="testimonials">
+    <div class="section-inner">
+        <div class="receipts-head">
+            <div>
+                <h2>27 years of watching these decisions <span class="headline-accent">play out.</span></h2>
+                {% include squiggle.html %}
+            </div>
+            <div class="stack gap-3">
+                <p class="lead-text">Rewrites that never shipped. Microservices nobody needed. The senior hire who looked great on paper. You don't have to learn these the expensive way.</p>
+                <div><a href="{{ site.baseurl }}/about/" class="link-purple">More about Kyle &rarr;</a></div>
+            </div>
+        </div>
+
+        {% include timeline.html %}
+
+        <div class="grid-cards mt-5">
+            {%- for t in site.data.testimonials %}
+            <figure class="quote-card">
+                <p class="quote-mark" aria-hidden="true">&ldquo;</p>
+                <blockquote>{{ t.quote }}</blockquote>
+                <figcaption>{% if t.link %}<a href="{{ t.link }}" target="_blank" rel="noopener"><strong>{{ t.name }}</strong></a>{% else %}<strong>{{ t.name }}</strong>{% endif %}, {{ t.title }}</figcaption>
+            </figure>
+            {%- endfor %}
+        </div>
+    </div>
+</section>

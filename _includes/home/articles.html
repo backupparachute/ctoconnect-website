@@ -1,0 +1,26 @@
+{%- comment -%}
+Shows posts marked "featured: true" in front matter. Falls back to the newest three.
+{%- endcomment -%}
+{%- assign picks = site.posts | where: "featured", true -%}
+{%- if picks.size < 3 -%}{%- assign picks = site.posts -%}{%- endif -%}
+{%- assign picks = picks | sort: "date" | reverse | slice: 0, 3 | reverse -%}
+<section class="section" id="writing">
+    <div class="section-inner">
+        <div class="articles-head">
+            <div>
+                <h2>How I think</h2>
+                <p class="lead-text">A few of the opinions you'll be paying for.</p>
+            </div>
+            <a href="{{ site.baseurl }}/articles/" class="link-purple">All articles &rarr;</a>
+        </div>
+        <div class="grid-cards">
+            {%- for post in picks %}
+            <a href="{{ post.url | relative_url }}" class="card-soft article-tile">
+                <span class="article-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                <span class="article-title">{{ post.title }}</span>
+                <span class="article-excerpt">{{ post.teaser | default: post.description | strip_html }}</span>
+            </a>
+            {%- endfor %}
+        </div>
+    </div>
+</section>

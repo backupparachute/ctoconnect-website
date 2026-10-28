@@ -1,0 +1,14 @@
+# The four questions in the homepage "You ask. I make the call." grid.
+# Rendered by _includes/home/answers.html.
+- question: Should we rewrite this app?
+  answer: Probably not.
+  why: Rewrites take 3x longer than planned. There is almost always a cheaper path.
+- question: My devs aren't fast enough.
+  answer: Maybe. Or your features are too big.
+  why: Slow teams usually have a sizing problem before a people problem.
+- question: Should we move to microservices?
+  answer: Not yet.
+  why: Microservices solve a scaling problem. Most teams adopt them years too early.
+- question: AI writes half our code. Is it safe?
+  answer: As safe as your guardrails.
+  why: AI and humans both ship bugs. Tests, reviews and knowing which parts can't break matter more than who typed it.
