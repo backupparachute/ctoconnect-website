@@ -1037,3 +1037,65 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Site footer: link columns and a small newsletter box */
+
+.footer-heading {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--subtle);
+    margin: 0 0 12px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    display: inline-block;
+    padding: 4px 0;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--purple);
+    text-decoration: underline;
+}
+
+.newsletter-footer {
+    background: #fff;
+    border: 2px solid var(--purple);
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.newsletter-footer-title {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--purple);
+    margin: 0;
+}
+
+.newsletter-footer-text {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 4px 0 14px;
+}
+
+.newsletter-footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.newsletter-footer-row .form-control {
+    flex: 1 1 180px;
+    min-width: 0;
+}
