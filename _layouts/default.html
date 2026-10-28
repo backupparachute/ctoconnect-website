@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/icon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/redesign.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -117,7 +118,7 @@
     <footer class="bg-light py-5 border-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-4">
+                <div class="col-lg-4 mb-4">
                     <svg width="240" height="70" viewBox="0 0 240 70" class="mb-3">
                         <text x="5" y="45"
                               font-family="'Caveat', cursive"
@@ -137,14 +138,28 @@
                               stroke-linecap="round"/>
                     </svg>
                     {% unless page.hide_tagline %}
-                    <p class="text-muted">CTO-level judgment when you need it.</p>
+                    <p class="text-muted">CTO judgment when you need it.</p>
                     {% endunless %}
                 </div>
-                <div class="col-lg-6 mb-4 text-lg-end">
-                    <p class="mb-2">
-                        <i class="fas fa-envelope me-2"></i>
-                        <a href="{{ site.baseurl }}/contact/" class="text-decoration-none text-dark" onclick="fathom.trackEvent('Clicked Contact')">Contact</a>
-                    </p>
+                <div class="col-6 col-lg-2 mb-4">
+                    <p class="footer-heading">Work with me</p>
+                    <ul class="footer-links">
+                        <li><a href="{{ site.baseurl }}/deep-dive/">CTO Deep Dive</a></li>
+                        <li><a href="{{ site.baseurl }}/advisory/">CTO Advisory</a></li>
+                        <li><a href="{{ site.baseurl }}/fractional-cto/">Fractional CTO</a></li>
+                        <li><a href="{{ site.baseurl }}/pricing/">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <p class="footer-heading">More</p>
+                    <ul class="footer-links">
+                        <li><a href="{{ site.baseurl }}/articles/">Articles</a></li>
+                        <li><a href="{{ site.baseurl }}/about/">About</a></li>
+                        <li><a href="{{ site.baseurl }}/contact/" onclick="fathom.trackEvent('Clicked Contact')">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    {% include newsletter-form.html context="footer" %}
                 </div>
             </div>
             <hr class="my-4">

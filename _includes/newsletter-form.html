@@ -1,9 +1,32 @@
 {%- comment -%}
 Newsletter signup. Posts to site.newsletter_endpoint and unlocks [data-gated] content on success.
 Optional param:
-  context - "article" (default) for the wall on a gated article, "general" for the end of public pages
+  context - "article" (default) for the wall on a gated article, "general" for the end of public pages,
+            "footer" for the small outlined box in the site footer
 {%- endcomment -%}
 {%- assign context = include.context | default: "article" -%}
+{%- if context == "footer" %}
+<div class="ctoc-newsletter newsletter-footer">
+    <div class="ctoc-newsletter-form">
+        <p class="newsletter-footer-title">Get the articles I don't publish</p>
+        <p class="newsletter-footer-text">Now and then. No daily drip.</p>
+        <form class="newsletter-footer-row" novalidate>
+            <label class="visually-hidden" for="ctoc-email-footer">Email</label>
+            <input type="email" class="form-control" id="ctoc-email-footer" name="email" placeholder="you@company.com" required autocomplete="email">
+            <button type="submit" class="btn btn-purple rounded-pill px-3">Subscribe</button>
+            <!-- Honeypot. Bots fill it, people never see it. -->
+            <div style="position:absolute; left:-10000px;" aria-hidden="true">
+                <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+        </form>
+        <p class="small text-danger mt-2 mb-0 ctoc-newsletter-error" style="display:none;">That didn't go through. Give it a minute and try again.</p>
+    </div>
+    <div class="ctoc-newsletter-done" style="display:none;">
+        <p class="newsletter-footer-title">You're in.</p>
+        <p class="newsletter-footer-text mb-0">Articles for subscribers are open for you across the site.</p>
+    </div>
+</div>
+{%- else %}
 <div class="card shadow rounded-3 border-0 bg-purple text-white ctoc-newsletter">
     <div class="card-body p-5 text-center">
         <div class="ctoc-newsletter-form">
@@ -39,6 +62,7 @@ Optional param:
         </div>
     </div>
 </div>
+{%- endif %}
 <script>
 (function () {
     var box = document.currentScript.previousElementSibling;

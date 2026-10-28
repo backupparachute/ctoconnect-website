@@ -1,0 +1,11 @@
+# Career timeline shown on the homepage and the About page.
+# Rendered by _includes/timeline.html. "about_text" replaces "text" on the About page.
+- year: "1998"
+  text: Started on EDI systems at Union Pacific Railroad.
+- year: The long middle
+  text: Fortune 500s, startups, the military and hedge funds.
+- year: "2018"
+  text: Built and sold a SaaS company.
+- year: Today
+  text: Helping founders make the call before it gets expensive.
+  about_text: Running Backup Parachute Software and helping founders make the call before it gets expensive.

@@ -1,0 +1,32 @@
+<section class="section" id="top">
+    <div class="section-inner-wide split">
+        <div class="stack">
+            <p class="eyebrow">CTO judgment, when you need it</p>
+            <h1>A second opinion from a CTO who's been there.</h1>
+            <p class="hero-lead">Start with a free call. It takes 20 minutes. Tell me what's going on and we'll figure out if we're a fit. If we are, you get decisions like this one instead of a report that runs 40 pages.</p>
+            <div class="hero-actions">
+                <a href="{{ site.diagnostic_call_url }}" class="btn-pill" onclick="fathom.trackEvent('Clicked Book Diagnostic Hero')">Book a free diagnostic call</a>
+                <a href="#answers" class="btn-pill-outline" onclick="fathom.trackEvent('Clicked See How I Think')">See how I think</a>
+            </div>
+        </div>
+        <div>
+            <div class="card-soft message-card">
+                <div class="message-head">
+                    <span class="avatar" aria-hidden="true">F</span>
+                    <div class="message-who">
+                        <strong>SaaS founder, team of 12</strong>
+                        <span>Tuesday, 9:42 PM</span>
+                    </div>
+                </div>
+                <p class="message-body">Our backend is a mess. The team wants to rewrite the whole thing in Go. They say it'll take <s>six months</s>. Every feature already takes forever. Should we do it?</p>
+            </div>
+            <div class="reply">
+                <p class="note reply-head">Don't rewrite.</p>
+                {% include squiggle.html %}
+                <p class="note note-light reply-body">A few services cause most of your bugs. Fix those first. You'll start shipping faster in a couple weeks.</p>
+                <p class="reply-sign">Kyle</p>
+            </div>
+            <p class="example-caption">Example question. Details changed.</p>
+        </div>
+    </div>
+</section>

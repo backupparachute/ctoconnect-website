@@ -1,0 +1,40 @@
+{%- assign in_progress = "Refactor auth (again)|Spike: move to microservices|Rewrite onboarding v3|Fix flaky checkout test|Upgrade all dependencies|Investigate slow dashboard|New pricing page|Hotfix: billing emails|AI search prototype" | split: "|" -%}
+{%- assign in_review = "Settings redesign|Webhook retries|Admin export CSV|Dark mode|API rate limits|Mobile nav cleanup" | split: "|" -%}
+<section class="section" id="motion">
+    <div class="section-inner split">
+        <div class="stack">
+            <h2>Everyone's busy. The roadmap still slips.</h2>
+            <p class="lead-text">More tickets moving isn't more product shipped. When the roadmap keeps slipping while the board stays full, that's a question for a CTO, not a developer.</p>
+            <div class="d-flex flex-column align-items-start">
+                <a href="{{ site.baseurl }}/articles/motion-vs-progress/" class="link-purple">Read: Motion vs. Progress &rarr;</a>
+                <a href="{{ site.baseurl }}/articles/velocity-is-a-trap/" class="link-purple">Read: Velocity Is a Trap &rarr;</a>
+            </div>
+        </div>
+        <div>
+            <p class="visually-hidden">A task board with 9 tickets in progress, 6 in review and nothing shipped. A handwritten note says: this is the problem. 15 things in flight, nothing done. Finish before you start.</p>
+            <div class="board" aria-hidden="true">
+                <div class="board-col">
+                    <p class="board-title">In progress &middot; {{ in_progress.size }}</p>
+                    {%- for t in in_progress %}
+                    <div class="board-card">{{ t }}</div>
+                    {%- endfor %}
+                </div>
+                <div class="board-col">
+                    <p class="board-title">In review &middot; {{ in_review.size }}</p>
+                    {%- for t in in_review %}
+                    <div class="board-card">{{ t }}</div>
+                    {%- endfor %}
+                </div>
+                <div class="board-col">
+                    <p class="board-title">Shipped &middot; 0</p>
+                    <div class="board-empty"></div>
+                    <div class="board-note">
+                        <svg width="60" height="46" viewBox="0 0 60 46" focusable="false"><path d="M10,44 C14,26 26,12 44,6 M44,6 L32,4 M44,6 L40,17" stroke="#6b21a8" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+                        <p class="note board-note-head">This is the problem.</p>
+                        <p class="note note-light board-note-body">15 things in flight, nothing done. Finish before you start.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

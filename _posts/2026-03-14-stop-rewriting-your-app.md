@@ -2,6 +2,7 @@
 title: "Stop Rewriting Your App"
 description: "The rewrite temptation is real. Here's why it's almost always the wrong call and what to do instead."
 author: "Kyle Miller"
+featured: true
 members_only: true
 teaser: "Every founder hits the moment where the codebase feels irredeemable. The rewrite fantasy is seductive. But I've watched teams burn millions on rewrites that never shipped."
 tags:

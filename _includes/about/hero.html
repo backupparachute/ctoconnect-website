@@ -1,0 +1,16 @@
+<section class="section">
+    <div class="section-inner-wide">
+        <div class="receipts-head">
+            <div>
+                <h1>27 years of making the <span class="headline-accent">hard calls.</span></h1>
+                {% include squiggle.html %}
+            </div>
+            <div class="stack gap-4">
+                <p class="lead-text">I've spent my career building software at every scale, and helping teams make the decisions that are expensive to get wrong.</p>
+                <div><a href="{{ site.diagnostic_call_url }}" class="btn-pill" onclick="fathom.trackEvent('Clicked Book Diagnostic About Top')">Book a free diagnostic call</a></div>
+            </div>
+        </div>
+
+        {% include timeline.html about=true %}
+    </div>
+</section>

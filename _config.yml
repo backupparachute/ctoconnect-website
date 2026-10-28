@@ -53,6 +53,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - docs/redesign/
 
 # Social media
 social:

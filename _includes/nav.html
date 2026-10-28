@@ -26,16 +26,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/pricing/" onclick="fathom.trackEvent('Clicked Services Nav')">Services</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/pricing/"{% if page.url == '/pricing/' %} aria-current="page"{% endif %} onclick="fathom.trackEvent('Clicked Services Nav')">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/articles/">Articles</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/articles/"{% if page.url == '/articles/' %} aria-current="page"{% endif %}>Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/about/">About</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
                 </li>
                 <li class="nav-item d-flex align-items-center">
-                    <a class="btn btn-purple btn-sm ms-lg-2" href="{{ site.diagnostic_call_url }}" onclick="fathom.trackEvent('Clicked Book Diagnostic Nav')">Book a Diagnostic Call</a>
+                    <a class="btn btn-purple btn-sm ms-lg-2" href="{{ site.diagnostic_call_url }}" onclick="fathom.trackEvent('Clicked Book Diagnostic Nav')">Book Your Free Diagnostic Call</a>
                 </li>
             </ul>
         </div>

@@ -1,0 +1,20 @@
+# The questions in the homepage "Short answers to expensive questions." grid.
+# Rendered by _includes/home/answers.html.
+- question: Should we rewrite this app?
+  answer: Probably not.
+  why: Rewrites take 3x longer than planned. There is almost always a cheaper path.
+- question: My devs aren't fast enough.
+  answer: Maybe, or your features are too big.
+  why: Slow teams usually have a sizing problem before a people problem.
+- question: Should we move to microservices?
+  answer: Not yet.
+  why: Microservices solve a scaling problem. Most teams adopt them years too early.
+- question: AI writes half our code. Is it safe?
+  answer: As safe as your guardrails.
+  why: AI and humans both ship bugs. Tests, reviews and knowing which parts can't break matter more than who typed it.
+- question: We're hiring a senior engineer. How do we tell if they're good?
+  answer: Ask them to cut a feature in half.
+  why: Strong seniors make the problem smaller before they write any code. Watch what they keep.
+- question: Should we build this or buy it?
+  answer: Buy it, unless customers pay you for exactly that.
+  why: Every tool you build is one more system your team has to keep running.
