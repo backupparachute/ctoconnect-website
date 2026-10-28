@@ -89,6 +89,7 @@ permalink: /contact/
         new FormData(form).forEach(function (value, key) {
             if (key !== 'website' && key !== 'newsletter') data[key] = value;
         });
+        data.form = 'contact';
         data.newsletter = form.newsletter.checked;
         data.source = window.location.pathname;
 
