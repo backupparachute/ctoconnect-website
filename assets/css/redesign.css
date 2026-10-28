@@ -851,7 +851,10 @@
     color: #fff;
 }
 
-.tier-card.is-featured .tier-name,
+.tier-card.is-featured .tier-name {
+    color: var(--teal);
+}
+
 .tier-card.is-featured .tier-desc,
 .tier-card.is-featured .tier-price span {
     color: #fff;
@@ -861,17 +864,17 @@
     opacity: 0.8;
 }
 
-/* Darker teal than the logo so white text stays readable */
+/* Theme teal, matching .btn-teal on the pricing page */
 .btn-pill.is-teal {
     min-height: 48px;
     font-size: 16px;
-    background: var(--teal-text);
-    border-color: var(--teal-text);
+    background: var(--teal);
+    border-color: var(--teal);
 }
 
 .btn-pill.is-teal:hover {
-    background: #115e59;
-    border-color: #115e59;
+    background: #0d9488;
+    border-color: #0d9488;
 }
 
 /* Home: articles */
