@@ -1,4 +1,4 @@
-# The questions in the homepage "Short answers to expensive questions." grid.
+# The questions in the homepage "Straight answers to expensive questions." grid.
 # Rendered by _includes/home/answers.html.
 - question: Should we rewrite this app?
   answer: Probably not.
