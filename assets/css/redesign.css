@@ -915,6 +915,7 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 1.05;
+    color: var(--purple);
 }
 
 .article-excerpt {
